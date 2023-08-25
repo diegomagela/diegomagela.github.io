@@ -1,0 +1,149 @@
+# title:
+# authors:
+# year:
+# doi:
+# pdf:
+# bibtex:
+# image
+# notes
+# code
+
+# journal
+# journal_short
+
+# conference
+# conference_short
+
+# book_title
+# publisher
+# publisher_short
+
+
+
+journal:
+
+  - title: Comparison between a linear and cubic fiber angle variation on buckling response of variable angle tow composite panel
+    authors: Diego Magela Lemos, Carlos Alberto Cimini Junior
+    year: 2021
+    journal_short: LAJS
+    journal: Latin American Journal of Solids and Structures
+    conference: 
+    doi: https://doi.org/10.1590/1679-78256464
+    pdf:
+    code:
+    bibtex: assets/publications/journal/lemos2021comparison.bib
+    image: assets/publications/journal/lemos2021comparison.png
+    notes:
+
+book:
+
+  - title: Metodologias alternativas para geração de curvas polares para o método blade element momentum
+    authors: Pedro Trombini Rodrigues, Diego Magela Lemos, Carlos Pagani, Daniel Sampaio Souza
+    year: 2022
+    booktitle: Tendências e avanços científicos nas engenharias":" aeronáutica, aeroespacial, eletrônica e de telecomunicações
+    publisher: Editora Amplla
+    publisher_short: AMPLLA
+    doi: https://doi.org/10.51859/amplla.tac372.1122-7
+    pdf:
+    code:
+    bibtex: assets/publications/book/rodrigues2022metodologias.bib
+    image: assets/publications/book/rodrigues2022metodologias.png
+    notes:
+
+proceedings:
+
+  - title: The dynamic snap-through response of bistable cross-ply composite plates
+    authors: Diego Magela Lemos, Flavio Donizeti Marques
+    year: 2022
+    conference: 6th Brazilian Conference on Composite Materials
+    conference_short: BCCM6
+    doi: https://doi.org/10.29327/566492
+    pdf:
+    code:
+    bibtex: assets/publications/proceedings/lemos2022dynamic.bib
+    image: assets/publications/proceedings/lemos2022dynamic.png
+    notes:
+
+  - title: Use of variable angle tow composites for plates under compressive load
+    authors: Diego Magela Lemos, Carlos Alberto Cimini Junior
+    year: 2021
+    conference: 5th Brazilian Conference on Composite Materials
+    conference_short: BCCM5
+    doi: 
+    pdf: http://soac.eesc.usp.br/index.php/bccm/5bccm/paper/viewFile/2926/1818
+    code:
+    bibtex: assets/publications/proceedings/lemos2021use.bib
+    image: assets/publications/proceedings/lemos2021use.png
+    notes:
+
+  - title: Blade element momentum simulations using polars extracted from wind-turbine-model experiments
+    authors: Pedro Trombini Rodrigues, Diego Magela Lemos, Carlos Pagani, Daniel Sampaio Souza
+    year: 2021
+    conference: 26th International Congress of Mechanical Engineering
+    conference_short: COBEM
+    doi: https://doi.org/10.26678/abcm.cobem2021.cob2021-0959
+    pdf: https://repositorio.unesp.br/bitstream/handle/11449/235009/rodrigues_pt_versaoeditor_sjbv_blade.pdf?sequence=3&isAllowed=y
+    code:
+    bibtex: assets/publications/proceedings/rodrigues2021blade.bib
+    image: assets/publications/proceedings/rodrigues2021blade.png
+    notes:
+
+  - title: The risk of fracture of an endodontically treated tooth in osteoporotic bone
+    authors: Diego Magela Lemos, Patrícia Oliveira de Souza,  Aline Batista Gonçalves Franco
+    year: 2019
+    conference: 25th International Congress of Mechanical Engineering
+    conference_short: COBEM
+    doi: https://doi.org/10.26678/ABCM.COBEM2019.COB2019-2102
+    pdf: https://www.dropbox.com/s/hk40qy1xt7htz1q/lemos2019risk_cobem.pdf?dl=0
+    code:
+    bibtex: assets/publications/proceedings/lemos2019risk.bib
+    image: assets/publications/proceedings/lemos2019risk.png
+    notes:
+
+  - title: Potencial do uso de compósitos VAT (Variable Angle Tow) em placas sob carregamento de flambagem
+    authors: Diego Magela Lemos, Carlos Alberto Cimini Junior
+    year: 2019
+    conference: XXII Encontro Nacional de Modelagem Computacional e X Encontro de Ciência e Tecnologia de Materiais
+    conference_short: ENMC/ECTM
+    doi: 
+    pdf: https://www.dropbox.com/s/fmqzwjivwpzidg1/lemos2019potencial_enmc.pdf?dl=0
+    code:
+    bibtex: assets/publications/proceedings/lemos2019potencial.bib
+    image: assets/publications/proceedings/lemos2019potencial.png
+    notes:
+
+  - title: Stress analysis in a post-restored tooth in osteoporotic bone
+    authors: Patrícia Oliveira de Souza, Diego Magela Lemos,  Aline Batista Gonçalves Franco
+    year: 2019
+    conference: XXII Encontro Nacional de Modelagem Computacional e X Encontro de Ciência e Tecnologia de Materiais
+    conference_short: ENMC/ECTM
+    doi: 
+    pdf: https://www.dropbox.com/s/2q7q0hgvffyeuv9/desouza2019stress_enmc.pdf?dl=0
+    code:
+    bibtex: assets/publications/proceedings/desouza2019stress.bib
+    image: assets/publications/proceedings/desouza2019stress.png
+    notes:
+
+  - title: Previsão da potência de eixo de uma turbina eólica através do método blade element momentum
+    authors: Diego Magela Lemos, Daniel Sampaio Souza
+    year: 2019
+    conference: XIII Simpósio de Mecânica Computacional
+    conference_short: SIMMEC
+    doi: 
+    pdf: https://www.doity.com.br/anais/xiiisimmec2018/trabalho/68390
+    code:
+    bibtex: assets/publications/proceedings/lemos2018previsao.bib
+    image: assets/publications/proceedings/lemos2018previsao.png
+    notes:
+
+  - title: Previsão da potência de eixo de uma turbina eólica de duas pás
+    authors: Diego Magela Lemos, Caio César Silva Araujo, Pedro Augusto Lara El-Corab, Daniel Souza Sampaio, Cláudio de Castro Pellegrini
+    year: 2019
+    conference: VII Congresso de Engenharias
+    conference_short: COEN
+    doi: 
+    pdf: https://www.ufsj.edu.br/portal2-repositorio/File/coen/PREVIS%C3O%20DA%20POT%CANCIA%20DE%20EIXO%20DE%20UMA%20TURBINA%20E%D3LICA%20DE%20DUAS%20P%C1S.pdf
+    code:
+    bibtex: assets/publications/proceedings/lemos2017previsao.bib
+    image: assets/publications/proceedings/lemos2017previsao.png
+    notes:

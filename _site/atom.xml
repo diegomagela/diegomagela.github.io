@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Diego Magela</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2023-08-22T20:07:37-03:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Useful linux command-line programs</title>
+   <link href="http://localhost:4000/2023/08/21/useful-linux-command"/>
+   <updated>2023-08-21T00:00:00-03:00</updated>
+   <id>http://localhost:4000/2023/08/21/useful-linux-command</id>
+   <content type="html">&lt;p&gt;I am a huge fan and enthusiastic of Linux. This is not exclusively due to the fact that it is free, ‘‘&lt;a href=&quot;https://www.gnu.org/philosophy/open-source-misses-the-point.html&quot;&gt;free speech, not free beer&lt;/a&gt;’’. Its strong terminal-based commands appear to be a great opportunity to perform repetitive tasks very easily with little knowledge of &lt;a href=&quot;https://www.gnu.org/software/bash/&quot;&gt;bash&lt;/a&gt;. As I am into academia, I will show useful command-line programs to facilitate academic-related tasks. Nonetheless, all code shown here can be easily used and/or adapted for other tasks.&lt;/p&gt;
+
+&lt;p&gt;A frequent task is to convert a set of images from one file extension to another. A very powerful program to perform this is &lt;a href=&quot;https://imagemagick.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageMagick&lt;/code&gt;&lt;/a&gt;. As stated on its website, “ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file formats, including JPEG, PNG, GIF, TIFF, and PDF.”&lt;/p&gt;
+
+&lt;p&gt;For those running a Debian-based distribution (another reason I love Linux)&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;imagemagick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;is all that is needed to install &lt;a href=&quot;https://imagemagick.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageMagick&lt;/code&gt;&lt;/a&gt; (and most other programs). The program &lt;a href=&quot;https://imagemagick.org/script/convert.php&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert&lt;/code&gt;&lt;/a&gt; is a member of &lt;a href=&quot;https://imagemagick.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageMagick&lt;/code&gt;&lt;/a&gt; suite and, it is the program used to convert images from one file extension to another. Let us consider a folder containing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; images.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── 1.png
+├── 2.png
+├── 3.png
+├── 4.png
+└── 5.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To convert all of them to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; at once, for instance, simply open a terminal, navigate to the folder containing the images, and enter the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.png | parallel convert &lt;span class=&quot;s1&quot;&gt;&apos;{}&apos;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;{.}.jpg&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The code above firstly lists all filenames, with one filename per line, having the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; extension. Them the result is ‘‘piped’’ to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parallel&lt;/code&gt; using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; operator, that runs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert&lt;/code&gt; in parallel to convert all files to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;. &lt;a href=&quot;https://www.gnu.org/software/parallel/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parallel&lt;/code&gt;&lt;/a&gt; will be explained in a future opportunity. In the current folder, you will see both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; images. If you want to remove all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; file, simply run&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.png 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Certainly, the same procedure can be done for other file formats. To obtain a complete list of supported file formats, run:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;convert identify &lt;span class=&quot;nt&quot;&gt;-list&lt;/span&gt; format 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In addition to simple image conversion, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert&lt;/code&gt; offers other options for editing, such as 3-D effects and color changes. Consulting the manual is always a worthwhile action. You can quickly access it by running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man&lt;/code&gt;. For instance,&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;man convert
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In summary, to convert a set of files from one file format to another and remove the files of the original format, use the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.png | parallel convert &lt;span class=&quot;s1&quot;&gt;&apos;{}&apos;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;{.}.jpg&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this context, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; command function as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;and&lt;/code&gt;, meaning that it runs the first command &lt;strong&gt;and&lt;/strong&gt; them the second one.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Best albums I have ever listened to so far</title>
+   <link href="http://localhost:4000/2023/08/21/music"/>
+   <updated>2023-08-21T00:00:00-03:00</updated>
+   <id>http://localhost:4000/2023/08/21/music</id>
+   <content type="html">&lt;p&gt;In the modern era of music streaming, it is rare to find people who listen to an entire artist’s album. Nevertheless, I strongly believe that when an artist (at least the majority) releases an album, they expect that listeners will listen to it fully, ideally from the first track to the last. While I may not always do this, mainly if I am not enjoying the album, I make an effort to listen to all the songs on an album at once. The list below highlights the albums I do like—albums where I like nearly all the songs. In other words, these are the albums I would likely consider purchasing on vinyl. Please note that the list is not arranged in any specific order.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Cosmotron (2003)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/77NWIVF4t4GKefwF2OIldS?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A Tabua De Esmeralda (1974)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5rcMJNWebtl2r2S18Je1A0?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Room On Fire (2003)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3HFbH1loOUbqCyPsLuHLLh?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Calango (1994)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5pp3Fjp4h728libl8vxoFn?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;(What’s The Story) Morning Glory (1995)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1VW1MFNstaJuygaoTPkdCk?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Disintegration (1989)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0H6TddUF2M63ZSHGvhk5yy?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Let’s Rock (2019)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0aA9rYw8PEv9G7tVIJ9dKg?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Construção (1971)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7yrRo2o4XzDfv3mNnkPRE5?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The Slow Rush (2020)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/31qVWUdRrlb8thMvts0yYL?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Be Here Now (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4v3p8Xcv94Z7YAtlurC9Zi?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Core (1992)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7k1YOwYf369EX0aHeXApWp?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Definitely Maybe (1994)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/50xG9YujTzMGaLHfJTskBy?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Is This It (2001)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2yNaksHgeMQM9Quse463b5?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;O Samba Poconé (1996)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7evTWhFmwKyf1GXnLzos3p?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sobrevivendo no Inferno (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1UzrzuOmZfBgXyS3pgKD10?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Nada Pode Me Parar (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0hPixFMI6iDjmqS0XkjTWq?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Wish (1992)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0aEL0zQ4XLuxQP0j7sLlS1?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Currents (2015)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/79dL7FLiJFOO0EoehUHQBv?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Temple Of The Dog (1990)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/63HdXCn0Xz1pRZc2GzMw7k?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Samba Esquema Novo (1963)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3xWp6y0HGsHZlXljNs7VRy?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Preço Curto, Prazo Longo (1999)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2hLNxoJZ5kZoBEX0XGBRNu?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Siderado (1998)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6gY2fW9jj71OGBkq03gW6B?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Imunização Racional (1975)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/track/3w5txx0rNgTf3H5ZitlQgL?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Stoney (2016)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3zAcZrky4QNM28YS0tHSYQ?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Americana (1998)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2RNTBrSO8U8XjjEj9RVvZ5?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Yours to Keep (2006)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1pJT6SArgRf1aQ5DCTxl7g?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;InnerSpeaker (2010)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1DNSmmRLfv97Yjq7MTFWng?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Return of the Dream Canteen (2022)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0KJc9ksnoJJsdpQxV3z5i1?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;First Impressions of Earth (2006)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1HQ61my1h3VWp2EBWKlp0n?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;beerbongs &amp;amp; bentleys (2018)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6trNtQUgC8cgbWcqoMYkOR?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;¿Cómo Te Llama? (2008)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/60quhRy45yA82CMcjtiOiu?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ladrão (2019)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4bVYzv8uj0wanD6BdwmdwM?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Smash (1994)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7IDywTRaCI8qzS3X8tNU3x?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;This Old Dog (2017)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4NNq2vwTapv4fSJcrZbPH7?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ixnay On The Hombre (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2PSgMApk089eV6e5LPbQeS?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Instrument Soundtrack (1999)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1owNOVlXTqmDVo4M2Z20uk?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Lonerism (2012)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3C2MFZ2iHotUQOSBzdSvM7?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;xx (2009)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2av2ZSHlvD7rvLSsMvtYCG?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Tranquility Base Hotel &amp;amp; Casino (2018)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1jeMiSeSnNS0Oys375qegp?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Shwayze (2008)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1dsx7hZiQeXIMDZ1dVgt5K?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Selvagens à Procura de Lei (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2C2bscJGG5jjJY3E65WuOk?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Salad Days (2014)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2sij95QgjmgrhNv33achzn?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Parachutes (2000)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6ZG5lRT77aJ3btmArcykra?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Brushfire Fairytales (2001)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2K9N8V0ORKpkpTOxhcFnud?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;El Camino (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5DLhV9yOvZ7IxVmljMXtNm?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Francis Trouble (2018)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3SwIjv6JSHkY14XUbOAtkp?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Marcy Playground (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5dR0fhE3oveLRSUMMQ3oRB?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Transpiração Continua Prolongada (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/09Nao8wNpzTz60nY8G2n7A?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Only By The Night (2008)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5CZR6ljD0x9fTiS4mh9wMp?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Suck It and See (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2ym2jcqckXqWeTDoxz3Kst?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sleep Through The Static (2008)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3fa8r86AofGDNs1S2d3xgz?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;I’m with You (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5wZtSIvijWCMc1vlPFqAyB?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Abaixo do Zero: Hello Hell (2019)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0d9km1VogLi6sN6S95ilyT?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;BE (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2TGqciWJqA7Q2YoweroGWY?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Angles (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6Jx4cGhWHewTcfKDJKguBQ?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A Rush of Blood to the Head (2002)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0RHX9XECH8IVI3LNgWDpmQ?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Because of The Times (2007)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5CiZOqd3iF6p2PsqBjljat?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;AM (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/78bpIziExqiI9qztvNFlQu?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Jorge Ben (1969)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3V3XJ3Sh62jPUYUMSQ1Tsf?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Noel Gallagher’s High Flying Birds (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4g2nrjzWOuEtZHtiBZrf1U?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;There Is Nothing Left To Lose (1999)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/28q2N44ocJECgf8sbHEDfY?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Brothers (2020)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7lhJVTvqL3QbwGN12QLiVj?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The New Abnormal (2020)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2xkZV2Hl1Omi8rk2D7t5lN?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Come Around Sundown (2010)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5xFZ4iElFbUFtOGX4lvdTM?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Unlimited Love (2022)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2ITVvrNiINKRiW7wA3w6w6?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Wasting Light (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5lnQLEUiVDkLbFJHXHQu9m?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Jake Bugg (2012)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6b2BArDCfSvW3VFenLJatj?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Humbung (2009)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5IEoiwkThhRmSMBANhpxl2?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Aha Shake Heartbreak (2005)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/3fNRzhnl6WAtghBXEeyaub?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;WALLS (2016)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/08ibdX8K0GETv20UEku3sm?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Homework (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5uRdvUR7xCnHmUW8n64n9y?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Torches (2011)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7Kmmw7Z5D2UD5MVwdm10sT?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Bluesman (2018)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0QMVSKhzT4u2DEd8qdlz4I?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Foo Fighters (1995)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4EnNuo8fG7dMoxMefbApRY?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Supermodel (2014)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/22cFcAQkydpTzeSKQZEKv0?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Talking Heads (1977)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0r7o2FeARRr23EZ0TJ0a8S?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Mechanical Bull (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0cRJKK0y1sfZEqWub4dK9v?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Random Access Memories (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4m2880jivSbbyEGAKfITCa?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Superunknown (1994)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4K8bxkPDa5HENw0TK7WxJh?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Out of Exile (2005)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0HQhToIjonHnJRRPN4jeJU?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Youth and Young Manhood (2003)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2137zeBGNgOWP4D96q6qxd?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Miike Snow (2009)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1AMTbO4k2kPRAn6udg9qJz?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Força Bruta (1970)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/12G0eYu3u8ZwdstT1flUXw?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Dropout Boogie (2022)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7LLyQJzyD56Avzk3uFzKUk?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;When You See Yourself (2021)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5mi6IbVDNVKpOO702ejPn6?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Happy to You (2012)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6YeV0JWW7g8dDf78jFIe1e?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The Colour And The Shape (1997)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/30ly6F6Xl0TKmyBCU50Khv?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The Getaway (2016)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/43otFXrY0bgaq5fB3GrZj6?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Purple (1994)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/57lcTrUlYgfMIPvBUsVU6h?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Delta Kream (2021)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/682pJqnx8hcrCfSjvyNBki?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Mellon Collie And The Infinite Sadness (1995)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4bPT6Q8ppaSNppk1kbEbLl?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;By the Way&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1jWKVgnHX8nwR551hQNx5K?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;13 Songs (1989)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1FcRwT7uoNdO8L9wbYsfAY?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Remain in Light (1980)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1JvXxLsm0PxlGH4LXzqMGq?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Audioslave (2022)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/293aYSIVNjjmkAwupnlxRd?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Californication (1999)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0fLhefnjlIV3pGNF9Wo8CD?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Songs For The Deaf (2002)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/4w3NeXtywU398NYW4903rY?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Rebirth (2009)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2N1pWk6xj2LX6sgGzHKbLX?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Discovery (2001)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/2noRn2Aes5aoNVsU6iWThc?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sadnecessary (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/1iCwsK0jUzBPQx7XEpumbz?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Turn Blue (2014)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/6TvxpBzf9c8H1fsrAaQ8t3?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Stadium Arcadium (2006)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7xl50xr9NDkd3i2kBbzsNZ?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Blossom (2017)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/7zuqkqhGkTH3PSdywhLgY4?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;…Like Clockwork (2013)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5T5NM01392dvvd4EhGrCnj?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Speaking in Tongues (1983)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/78MM8HrabEGPLVWaJkM2t1?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The Stone Roses (1989)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/0um9FI6BLBldL5POP4D4Cw?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Little Creatures (1985)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/album/5Dja2ASXd7MOM628iwYdtA?utm_source=generator&quot; width=&quot;100%&quot; height=&quot;152&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Best movies I have ever watched so far</title>
+   <link href="http://localhost:4000/2023/08/21/movies"/>
+   <updated>2023-08-21T00:00:00-03:00</updated>
+   <id>http://localhost:4000/2023/08/21/movies</id>
+   <content type="html">&lt;p&gt;As rating and criticizing a movie is not an easy task for a non-film critic, this list is just a compilation of the movies that I consider the best. It is not arranged in any particular order.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0361748/&quot;&gt;Inglourious Basterds (2009)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000233/?ref_=tt_cl_dr_1&quot;&gt;[Quentin Tarantino]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0076740/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_sorce&quot;&gt;Sorcerer (1977)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001243/?ref_=tt_cl_dr_1&quot;&gt;[William Friedkin]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt3474994/?ref_=adv_li_tt&quot;&gt;Casa Grande (2014)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm1805204/?ref_=tt_cl_dr_1&quot;&gt;[Fellipe Barbosa]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0112641/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_casino&quot;&gt;Casino (1995)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1&quot;&gt;[Martin Scorsese]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0075314/?ref_=nm_knf_t_1&quot;&gt;Taxi Driver (1976)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1&quot;&gt;[Martin Scorsese]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1130884/?ref_=tt_sims_tt_t_3&quot;&gt;Shutter Island (2010)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1&quot;&gt;[Martin Scorsese]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0993846/?ref_=tt_sims_tt_t_1&quot;&gt;The Wolf of Wall Street (2013)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1&quot;&gt;[Martin Scorsese]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0137523/?ref_=tt_sims_tt_t_5&quot;&gt;Fight Club (1999)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000399/?ref_=tt_cl_dr_1&quot;&gt;[David Fincher]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0109830/?ref_=tt_sims_tt_t_2&quot;&gt;Forrest Gump (1994)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000709/?ref_=tt_cl_dr_1&quot;&gt;[Robert Zemeckis]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0111161/?ref_=tt_sims_tt_t_3&quot;&gt;The Shawshank Redemption (1994)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001104/?ref_=tt_cl_dr_1&quot;&gt;[Frank Darabont]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0108052/?ref_=tt_sims_tt_t_9&quot;&gt;Schindler’s List (1993)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000229/?ref_=tt_cl_dr_1&quot;&gt;[Steven Spielberg]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0120815/?ref_=tt_sims_tt_t_6&quot;&gt;Saving Private Ryan (1998)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000229/?ref_=tt_cl_dr_1&quot;&gt;[Steven Spielberg]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0102926/?ref_=tt_sims_tt_t_7&quot;&gt;The Silence of the Lambs (1991)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001129/?ref_=tt_cl_dr_1&quot;&gt;[Jonathan Demme]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0172495/?ref_=tt_sims_tt_t_11&quot;&gt;Gladiator (2000)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000631/?ref_=tt_cl_dr_1&quot;&gt;[Ridley Scott]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0407887/?ref_=tt_sims_tt_t_7&quot;&gt;The Departed (2006)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1&quot;&gt;[Martin Scorsese]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0268978/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_a%2520beauti&quot;&gt;A Beautiful Mind (2001)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000165/?ref_=tt_cl_dr_1&quot;&gt;[Ron Howard]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0119217/?ref_=tt_sims_tt_t_1&quot;&gt;Good Will Hunting (1997)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001814/?ref_=tt_cl_dr_1&quot;&gt;[Gus Van Sant]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0271383/?ref_=tt_sims_tt_t_2&quot;&gt;O Auto da Compadecida (2000)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0037136/?ref_=tt_cl_dr_1&quot;&gt;[Guel Arraes]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0264464/?ref_=tt_sims_tt_t_4&quot;&gt;Catch Me If You Can (2002)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000229/?ref_=tt_cl_dr_1&quot;&gt;[Steven Spielberg]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0456899/?ref_=tt_sims_tt_t_9&quot;&gt;Cidade Baixa (2005)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0532509/?ref_=tt_cl_dr_1&quot;&gt;[Sergio Machado]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0100405/?ref_=nm_knf_t_1&quot;&gt;Pretty Woman (1990)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0005190/?ref_=tt_cl_dr_1&quot;&gt;[Garry Marshall]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0195685/?ref_=nm_knf_t_2&quot;&gt;Erin Brockovich (2000)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001752/?ref_=tt_cl_dr_1&quot;&gt;[Steven Soderbergh]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0119488/?ref_=nm_knf_t_4&quot;&gt;L.A. Confidential (1997)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000436/?ref_=tt_cl_dr_1&quot;&gt;[Curtis Hanson]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0113277/?ref_=tt_sims_tt_i_1&quot;&gt;Heat (1995)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000520/?ref_=tt_cl_dr_1&quot;&gt;[Michael Mann]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0369339/?ref_=nm_knf_t_2&quot;&gt;Collateral (2004)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000520/?ref_=tt_cl_dr_1&quot;&gt;[Michael Mann]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0095953/?ref_=tt_sims_tt_t_3&quot;&gt;Rain Man (1988)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001469/?ref_=tt_cl_dr_1&quot;&gt;[Barry Levinson]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0350258/?ref_=tt_sims_tt_i_3&quot;&gt;Ray (2004)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000431/?ref_=tt_cl_dr_1&quot;&gt;[Taylor Hackford]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0104797/?ref_=tt_sims_tt_i_10&quot;&gt;Malcolm X (1992)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000490/?ref_=tt_cl_dr_1&quot;&gt;[Spike Lee]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2671706/?ref_=tt_sims_tt_t_10&quot;&gt;Fences (2016)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000243/?ref_=tt_cl_dr_1&quot;&gt;[Denzel Washington]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1907668/?ref_=tt_sims_tt_t_1&quot;&gt;Flight (2012)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000709/?ref_=tt_cl_dr_1&quot;&gt;[Robert Zemeckis]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt3263904/?ref_=tt_sims_tt_i_3&quot;&gt;Sully (2016)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000142/?ref_=tt_cl_dr_1&quot;&gt;[Clint Eastwood]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1535109/?ref_=tt_sims_tt_t_1&quot;&gt;Captain Phillips (2013)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0339030/?ref_=tt_cl_dr_1&quot;&gt;[Paul Greengrass]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2179136/?ref_=tt_sims_tt_t_3&quot;&gt;American Sniper (2014)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000142/?ref_=tt_cl_dr_1&quot;&gt;[Clint Eastwood]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2119532/?ref_=tt_sims_tt_t_6&quot;&gt;Hacksaw Ridge (2016)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000154/?ref_=tt_cl_dr_1&quot;&gt;[Mel Gibson]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2713180/?ref_=tt_sims_tt_t_11&quot;&gt;Fury (2014)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0043742/?ref_=tt_cl_dr_1&quot;&gt;[David Ayer]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2084970/?ref_=tt_sims_tt_t_11&quot;&gt;The Imitation Game (2014)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0878763/?ref_=tt_cl_dr_1&quot;&gt;[Morten Tyldum]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0317248/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_the%2520city%2520of%2520god&quot;&gt;Cidade de Deus (2002)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0576987/?ref_=tt_cl_dr_1&quot;&gt;[Fernando Meirelles]&lt;/a&gt; and &lt;a href=&quot;https://www.imdb.com/name/nm0526199/?ref_=tt_cl_dr_2&quot;&gt;[Kária Lund]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0945383/?ref_=tt_sims_tt_t_3&quot;&gt;Querô (2007)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm2512885/?ref_=tt_cl_dr_1&quot;&gt;[Carlos Cortez]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt5013056/?ref_=tt_sims_tt_t_5&quot;&gt;Dunkirk (2017)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0634240/?ref_=tt_cl_dr_1&quot;&gt;[Christopher Nolan]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1663202/?ref_=tt_sims_tt_t_8&quot;&gt;The Revenant (2015)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0327944/?ref_=tt_cl_dr_1&quot;&gt;[Alejandro G. Iñárritu]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1343092/?ref_=tt_sims_tt_t_9&quot;&gt;The Great Gatsby (2013)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0525303/?ref_=tt_cl_dr_1&quot;&gt;[Baz Luhrmann]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2980516/?ref_=tt_sims_tt_t_2&quot;&gt;The Theory of Everything (2014)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm1016428/?ref_=tt_cl_dr_1&quot;&gt;[James Marsh]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0914798/?ref_=tt_sims_tt_t_12&quot;&gt;The Boy in the Striped Pajamas (2008)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0379179/?ref_=tt_cl_dr_1&quot;&gt;[Mark Herman]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0263124/?ref_=tt_sims_tt_t_1&quot;&gt;Bicho de Sete Cabeças (2000)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm1738698/?ref_=tt_cl_dr_1&quot;&gt;[Laís Bodanzky]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0421715/?ref_=tt_sims_tt_t_1&quot;&gt;The Curious Case of Benjamin Button (2008)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000399/?ref_=tt_cl_dr_1&quot;&gt;[David Fincher]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_once&quot;&gt;Once Upon a Time in… Hollywood (2019)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000233/?ref_=tt_cl_dr_1&quot;&gt;[Quentin Tarantino]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0472043/?ref_=nv_sr_srsg_3_tt_6_nm_2_q_apo&quot;&gt;Apocalypto (2006)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000154/?ref_=tt_cl_dr_1&quot;&gt;[Mel Gibson]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0078788/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_apo&quot;&gt;Apocalypse Now (1979)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000338/?ref_=tt_cl_dr_1&quot;&gt;[Francis Ford Coppola]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0112384/?ref_=nv_sr_srsg_7_tt_6_nm_2_q_apo&quot;&gt;Apollo 13 (1995)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000165/?ref_=tt_cl_dr_1&quot;&gt;[Ron Howard]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0416449/?ref_=nm_knf_t_1&quot;&gt;300 (2006)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0811583/?ref_=tt_cl_dr_1&quot;&gt;[Zack Snyder]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt14168118/?ref_=nm_flmg_t_3_act&quot;&gt;7 Prisioneiros (2021)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm2910292/?ref_=tt_cl_dr_1&quot;&gt;[Alexandre Moratto]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0213149/?ref_=tt_tpks_tt_t_20_pd_detail_2_pbr_ic&quot;&gt;Pearl Harbor (2001)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000881/?ref_=tt_cl_dr_1&quot;&gt;[Michael Bay]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0955308/?ref_=tt_sims_tt_t_10&quot;&gt;Robin Hood (2010)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000631/?ref_=tt_cl_dr_1&quot;&gt;[Ridley Scott]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0311113/?ref_=tt_sims_tt_t_8&quot;&gt;Master and Commander: The Far Side of the World (2003)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001837/?ref_=tt_cl_dr_1&quot;&gt;[Peter Weir]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0120338/?ref_=tt_tpks_tt_t_30_pd_detail_2_pbr_ic&quot;&gt;Titanic (1997)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000116/?ref_=tt_cl_dr_1&quot;&gt;[James Cameron]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0293007/?ref_=adv_li_tt&quot;&gt;Carandiru (2003)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0002199/?ref_=tt_cl_dr_1&quot;&gt;[Hector Babenco]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt8750570/?ref_=nm_flmg_t_7_act&quot;&gt;Sergio (2020)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0994499/?ref_=tt_cl_dr_1&quot;&gt;[Greg Barker]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt6760876/?ref_=nm_flmg_t_8_act&quot;&gt;Wasp Network (2019)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000801/?ref_=tt_cl_dr_1&quot;&gt;[Olivier Assayas]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt3513548/&quot;&gt;Richard Jewell (2019)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000142/?ref_=tt_cl_dr_1&quot;&gt;[Clint Eastwood]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1410063/&quot;&gt;The Flowers of War (2011)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0955443/?ref_=tt_cl_dr_1&quot;&gt;[Yimou Zhang]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0308383/?ref_=fn_al_tt_1&quot;&gt;The Human Stain (2003)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000914/?ref_=tt_cl_dr_1&quot;&gt;[Robert Benton]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0100046/?ref_=fn_al_tt_3&quot;&gt;The Long Walk Home (1990)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0669004/?ref_=tt_cl_dr_1&quot;&gt;[Richard Pearce]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0117913/?ref_=fn_al_tt_1&quot;&gt;A Time to Kill (1996)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001708/?ref_=tt_cl_dr_1&quot;&gt;[Joel Schumacher]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0091763/?ref_=fn_al_tt_1&quot;&gt;Platoon (1986)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000231/?ref_=tt_cl_dr_1&quot;&gt;[Oliver Stone]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0071877/?ref_=fn_al_tt_2&quot;&gt;Murder on the Orient Express (1974)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001486/?ref_=tt_cl_dr_1&quot;&gt;[Sidney Lumet]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0112818/?ref_=fn_al_tt_1&quot;&gt;Dead Man Walking (1995)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000209/?ref_=tt_cl_dr_1&quot;&gt;[Tim Robbins]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0379725/?ref_=fn_al_tt_1&quot;&gt;Capote (2005)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0587955/?ref_=tt_cl_dr_1&quot;&gt;[Bennett Miller]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0253474/?ref_=fn_al_tt_1&quot;&gt;The Pianist (2005)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000591/?ref_=tt_cl_dr_1&quot;&gt;[Roman Polanski]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt2106476/?ref_=fn_al_tt_1&quot;&gt;The Hunt (2012)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0899121/?ref_=tt_cl_dr_1&quot;&gt;[Thomas Vinterberg]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0117665/?ref_=tt_sims_tt_i_5&quot;&gt;Sleepers (1996)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001469/?ref_=tt_cl_dr_1&quot;&gt;[Barry Levinson]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0488120/?ref_=tt_sims_tt_i_6&quot;&gt;Fracture (2007)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0387706/?ref_=tt_cl_dr_1&quot;&gt;[Gregory Hoblit]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0172493/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_garota%2520inte&quot;&gt;Girl, Interrupted (1999)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0003506/?ref_=tt_cl_dr_1&quot;&gt;[James Mangold]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0145681/?ref_=tt_sims_tt_i_1&quot;&gt;The Bone Collector (1999)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0637518/?ref_=tt_cl_dr_1&quot;&gt;[Phillip Noyce]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0259711/?ref_=tt_sims_tt_i_10&quot;&gt;Vanilla Sky (2001)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001081/?ref_=tt_cl_dr_1&quot;&gt;[Cameron Crowe]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0092099/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_top%2520gun&quot;&gt;Top Gun (1986)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001716/?ref_=tt_cl_dr_1&quot;&gt;[Tony Scott]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1745960/?ref_=nv_sr_srsg_3_tt_7_nm_1_q_top%2520gun&quot;&gt;Top Gun: Maverick (2022)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm2676052/?ref_=tt_cl_dr_1&quot;&gt;[Joseph Kosinski]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1596363/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_the%2520big&quot;&gt;The Big Short (2015)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0570912/?ref_=tt_cl_dr_1&quot;&gt;[Adam McKay]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt1210166/?ref_=tt_sims_tt_i_1&quot;&gt;Moneyball (2011)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0587955/?ref_=tt_cl_dr_1&quot;&gt;[Bennett Miller]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0110322/?ref_=tt_tpks_tt_i_2_pd_detail_2_pbr_ic&quot;&gt;Legends of the Fall (1994)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0001880/?ref_=tt_cl_dr_1&quot;&gt;[Edward Zwick]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0117381/&quot;&gt;Primal Fear (1996)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0387706/?ref_=tt_cl_dr_1&quot;&gt;[Gregory Hoblit]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt4846340/&quot;&gt;Hidden Figures (2016)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0577647/?ref_=tt_cl_dr_1&quot;&gt;[Theodore Melfi]&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.imdb.com/title/tt0110413/&quot;&gt;Léon: The Professional (1994)&lt;/a&gt; &lt;a href=&quot;https://www.imdb.com/name/nm0000108/?ref_=tt_cl_dr_1&quot;&gt;[Luc Besson]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>

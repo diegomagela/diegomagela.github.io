@@ -1,0 +1,66 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<!-- LaTeX Support -->
+
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [['$','$'], ['\\(','\\)']],
+processEscapes: true},
+jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+TeX: {
+extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+equationNumbers: {
+autoNumber: "AMS"
+}
+}
+});
+</script>
+
+<body>
+  <div class="container">
+    <header class="masthead">
+      <!-- <h3>
+        <a href="/"> {{ site.name }}</a>
+      </h3> -->
+      <ul class="nav">
+        {% for item in site.data.navigation.links %}
+        <li>
+          <a href="{{ item.url }}" {% if item.url==page.url %} class="active" {% endif %}>{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </header>
+
+    <div class="body">
+
+      {{ content }}
+
+    </div>
+
+    <div class="footer">
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a>.
+    </div>
+
+  </div>
+
+  <script src="/anchor.min.js"></script>
+  <script>
+    var selector = '.post-body h2, .post-body h3';
+    addAnchors(selector);
+  </script>
+
+</body>
+
+</html>

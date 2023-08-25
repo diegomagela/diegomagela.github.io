@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="archive">
+  <h1 class="mb-3">Tag #{{page.tag}}</h1>
+
+  {% for post in site.posts %}
+
+  {% if post.tags contains page.tag %}
+
+  <div class="archive-item d-md-flex">
+    <a href="{{ site.baseurl }}{{ post.url }}" class="flex-none">
+      {{ post.title }}
+    </a>
+
+    <div class="spacer d-none d-md-block"></div>
+
+    <div class="archive-date flex-none">
+      {{ post.date | date: "%B %d, %Y" }}
+      <!-- &middot;
+            {{ time }} min. read -->
+    </div>
+
+  </div>
+
+  <div class="archive-description d-md-flex">
+    {{ post.excerpt }}
+  </div>
+
+  {% endif %}
+
+  {% endfor %}
+
+</div>

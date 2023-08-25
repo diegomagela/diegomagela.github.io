@@ -1,0 +1,36 @@
+[
+  
+    {
+
+      "title"    : "Useful linux command-line programs",
+      "description" : "",
+      "url"      : "/2023/08/21/useful-linux-command",
+      "category" : "writing",
+      "tags"     : "bash, linux",
+      "date"     : "2023-08-21 00:00:00 -0300"
+
+    } ,
+  
+    {
+
+      "title"    : "Best albums I have ever listened to so far",
+      "description" : "",
+      "url"      : "/2023/08/21/music",
+      "category" : "blog",
+      "tags"     : "",
+      "date"     : "2023-08-21 00:00:00 -0300"
+
+    } ,
+  
+    {
+
+      "title"    : "Best movies I have ever watched so far",
+      "description" : "",
+      "url"      : "/2023/08/21/movies",
+      "category" : "blog",
+      "tags"     : "",
+      "date"     : "2023-08-21 00:00:00 -0300"
+
+    } 
+  
+]

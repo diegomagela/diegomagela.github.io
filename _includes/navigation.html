@@ -1,0 +1,31 @@
+<!-- <header aria-hidden="true" class="no-print"> -->
+
+   <nav role="navigation" aria-hidden="true">
+      <ul>
+         {% for item in site.data.navigation.links %}
+         <span>
+            <li>
+               <a href="{{ item.url }}" {% if item.url==page.url %} class="active" {% endif %}>{{ item.title }}</a>
+            </li>
+         </span>
+         {% endfor %}
+      </ul>
+   </nav>
+
+   {% if site.avatar %}
+   <a href="/" id="site-avatar">
+      <img src="{{ site.avatar }}" alt="avatar" />
+   </a>
+   {% endif %}
+
+   {% if site.name %}
+   <a href="/">
+      <div id="site-title">{{ site.name }}</div>
+   </a>
+   {% endif %}
+
+   {% if site.bio %}
+   <div id="site-description"> {{ site.bio }} </div>
+   {% endif %}
+
+<!-- </header> -->
