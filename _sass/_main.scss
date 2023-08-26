@@ -327,9 +327,11 @@ a:hover {
 	flex-wrap: wrap;
 	padding-bottom: .5rem;
 	margin-bottom: 3rem;
-	// border-bottom: 0.01rem solid var(--hr-color);
+	border-bottom: 0.125rem solid var(--hr-color);
 	font-size: 1rem;
-	justify-content: end;
+
+	// background-color: var(--base02);
+	// justify-content: center;
 }
 
 @media (min-width: 34em) {
@@ -357,14 +359,14 @@ a:hover {
 
 .nav a.active {
 	font-weight: 600;
-	border-bottom: 0.1rem solid var(--link-border-color);
+	// border-bottom: 0.1rem solid var(--link-border-color);
 }
 
 .footer {
 	padding-top: 1.5rem;
 	font-size: .875rem;
 	border-top: 0.125rem solid var(--hr-color);
-	text-align: end;
+	text-align: left;
 }
 
 .post {
@@ -1080,9 +1082,13 @@ iframe.twitter-tweet.twitter-tweet-rendered {
 	content: "\e600"
 }
 
+// Publications
+
 .publications-link {
 	font-size: 80%;
 }
+
+// Search page
 
 #search-container input[type=text] {
 	border-radius: 4px;
@@ -1103,4 +1109,54 @@ iframe.twitter-tweet.twitter-tweet-rendered {
 
 #results-container {
 	margin: .5rem 0;
+}
+
+// Albums
+
+.wrapper-album {
+	display: grid;
+	grid-template-columns: 8rem 10rem 8rem 10rem;
+	grid-gap: 1rem;
+	margin-top: 3rem;
+}
+
+@media (max-width: 35em) {
+	.wrapper-album {
+		grid-template-columns: 8rem 10rem;
+		grid-gap: 1rem;
+	}
+
+}
+
+.wrapper-album p {
+	margin: 0;
+}
+
+.album-year {
+	color: var(--secondary-color);
+}
+
+// Movies
+
+.wrapper-movie {
+	display: grid;
+	grid-template-columns: 8rem 10rem 8rem 10rem;
+	grid-gap: 1rem;
+	margin-top: 3rem;
+}
+
+@media (max-width: 40em) {
+	.wrapper-movie {
+		grid-template-columns: 8rem 10rem;
+		grid-gap: 1rem;
+	}
+
+}
+
+.wrapper-movie p {
+	margin: 0;
+}
+
+.movie-year {
+	color: var(--secondary-color);
 }

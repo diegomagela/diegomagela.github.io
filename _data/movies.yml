@@ -1,0 +1,36 @@
+- title: Inglourious Basterds
+  year:  2009
+  director: Quentin Tarantino
+  img: https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0361748/
+
+- title: Sorcerer
+  year:  1977
+  director: William Friedkin
+  img: https://m.media-amazon.com/images/M/MV5BZTE4Zjc2MWQtZTYzNS00ZjJmLWFhYWUtMGI0M2ZkOWRhYWJjXkEyXkFqcGdeQXVyMjYzNDExNzU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0076740/?ref_=fn_al_tt_1
+
+- title: Casa Grande
+  year:  2014
+  director: Fellipe Barbosa
+  img: https://m.media-amazon.com/images/M/MV5BMTk0MTI4OTQ5NV5BMl5BanBnXkFtZTgwMzU5NzQyNzE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc
+
+- title: Casino
+  year:  1995
+  director: Martin Scorsese
+  img: https://m.media-amazon.com/images/M/MV5BMTcxOWYzNDYtYmM4YS00N2NkLTk0NTAtNjg1ODgwZjAxYzI3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0112641/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_casino
+
+- title: Taxi Driver
+  year:  1976
+  director: Martin Scorsese
+  img: https://m.media-amazon.com/images/M/MV5BM2M1MmVhNDgtNmI0YS00ZDNmLTkyNjctNTJiYTQ2N2NmYzc2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0075314/?ref_=nm_knf_t_1
+
+- title: Shutter Island
+  year:  2010
+  director: Martin Scorsese
+  img: https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1130884/?ref_=tt_sims_tt_t_3
+
