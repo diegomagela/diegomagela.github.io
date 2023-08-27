@@ -1,3 +1,21 @@
+- title: O Auto da Compadecida
+  year:  2000
+  director: Guel Arraes
+  img: https://m.media-amazon.com/images/M/MV5BMjMzMDA4ODktMTg5OS00NjQwLWI1MDgtMDZhODU2Yzg2MDQwXkEyXkFqcGdeQXVyNDEyNjEzOTg@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0271383/?ref_=tt_sims_tt_t_2
+
+- title: Cidade de Deus
+  year:  2002
+  director: Fernando Meirelles
+  img: https://m.media-amazon.com/images/M/MV5BOTMwYjc5ZmItYTFjZC00ZGQ3LTlkNTMtMjZiNTZlMWQzNzI5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0317248/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_the%2520city%2520of%2520god
+
+- title: Apocalypse Now
+  year:  1979
+  director: Francis Ford Coppola
+  img: https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0078788/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_apo
+
 - title: Inglourious Basterds
   year:  2009
   director: Quentin Tarantino
@@ -10,11 +28,35 @@
   img: https://m.media-amazon.com/images/M/MV5BZTE4Zjc2MWQtZTYzNS00ZjJmLWFhYWUtMGI0M2ZkOWRhYWJjXkEyXkFqcGdeQXVyMjYzNDExNzU@._V1_FMjpg_UX1000_.jpg
   url: https://www.imdb.com/title/tt0076740/?ref_=fn_al_tt_1
 
-- title: Casa Grande
-  year:  2014
-  director: Fellipe Barbosa
-  img: https://m.media-amazon.com/images/M/MV5BMTk0MTI4OTQ5NV5BMl5BanBnXkFtZTgwMzU5NzQyNzE@._V1_FMjpg_UX1000_.jpg
-  url: https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc
+- title: Murder on the Orient Express
+  year:  1974
+  director: Sidney Lumet
+  img: https://m.media-amazon.com/images/M/MV5BNDlkZjJjYTktZDI4OS00MWFkLTg1MzMtNTY3MmI2OTBkMTU1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0071877/?ref_=fn_al_tt_2
+
+- title: Top Gun
+  year:  1986
+  director: Tony Scott
+  img: https://m.media-amazon.com/images/M/MV5BZjQxYTA3ODItNzgxMy00N2Y2LWJlZGMtMTRlM2JkZjI1ZDhhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0092099/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_top%2520gun
+
+- title: Top Gun - Maverick
+  year:  2022
+  director: Joseph Kosinski
+  img: https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1745960/?ref_=nv_sr_srsg_3_tt_7_nm_1_q_top%2520gun
+
+- title: Legends of the Fall
+  year:  1994
+  director: Edward Zwick
+  img: https://m.media-amazon.com/images/M/MV5BMTYwMjYxNTAyN15BMl5BanBnXkFtZTgwMTc3MjkyMTE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0110322/?ref_=tt_tpks_tt_i_2_pd_detail_2_pbr_ic
+
+- title: Léon - The Professional
+  year:  1994
+  director: Luc Besson
+  img: https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0110413/
 
 - title: Casino
   year:  1995
@@ -28,9 +70,428 @@
   img: https://m.media-amazon.com/images/M/MV5BM2M1MmVhNDgtNmI0YS00ZDNmLTkyNjctNTJiYTQ2N2NmYzc2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg
   url: https://www.imdb.com/title/tt0075314/?ref_=nm_knf_t_1
 
+- title: 7 Prisioneiros
+  year:  2021
+  director: Alexandre Moratto
+  img: https://m.media-amazon.com/images/M/MV5BNThmN2JlYmQtYzE5Zi00Y2QxLThlOWUtYWM3NTI5YTAwMjc4XkEyXkFqcGdeQXVyMTgxMzA4ODY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt14168118/?ref_=nm_flmg_t_3_act
+
 - title: Shutter Island
   year:  2010
   director: Martin Scorsese
   img: https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg
   url: https://www.imdb.com/title/tt1130884/?ref_=tt_sims_tt_t_3
 
+- title: The Wolf of Wall Street 
+  year:  2013
+  director: Martin Scorsese
+  img: https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0993846/?ref_=tt_sims_tt_t_1
+
+- title: Fight Club
+  year:  1999
+  director: David Fincher
+  img: https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0137523/?ref_=tt_sims_tt_t_5
+
+- title: Forest Gump
+  year:  1994
+  director: Robert Zemeckis
+  img: https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0109830/?ref_=tt_sims_tt_t_2
+
+- title: The Shawshank Redemption
+  year:  1994
+  director: Frank Darabont
+  img: https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0111161/?ref_=tt_sims_tt_t_3
+
+- title: Bicho de Sete Cabeças
+  year:  2000
+  director: Laís Bodanzky
+  img: https://m.media-amazon.com/images/M/MV5BN2Y2MGE3OTUtMDhkZC00MmU1LTg5NTktYjExNGZmNjgzNjJiXkEyXkFqcGdeQXVyMTY2MzYyNzA@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0263124/?ref_=tt_sims_tt_t_1
+
+- title: Schindler's List
+  year:  1993
+  director: Steven Spielberg
+  img: https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0108052/?ref_=tt_sims_tt_t_9
+
+- title: Erin Brockovich
+  year:  2000
+  director: Steven Soderbergh
+  img: https://m.media-amazon.com/images/M/MV5BYTA1NWRkNTktNDMxNS00NjE4LWEzMDAtNzA3YzlhYzRhNDA4L2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0195685/?ref_=nm_knf_t_2
+
+- title: Saving Private Ryan
+  year:  1998
+  director: Steven Spielberg
+  img: https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0120815/?ref_=tt_sims_tt_t_6
+
+- title: Heat
+  year:  1995
+  director: Michael Mann
+  img: https://m.media-amazon.com/images/M/MV5BYjZjNTJlZGUtZTE1Ny00ZDc4LTgwYjUtMzk0NDgwYzZjYTk1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0113277/?ref_=tt_sims_tt_i_1
+
+- title: Carandiru
+  year:  2003
+  director: Hector Babenco
+  img: https://m.media-amazon.com/images/M/MV5BYzcxZmRhNmYtMjNmMy00OGU1LWFmMzktYjAyYzFhNWJjYmFmXkEyXkFqcGdeQXVyMTUwNjg3NTUw._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0293007/?ref_=adv_li_tt
+
+- title: The Silence of the Lambs
+  year:  1991
+  director: Jonathan Demme
+  img: https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0102926/?ref_=tt_sims_tt_t_7
+
+- title: Gladiator
+  year:  2000
+  director: Ridley Scott
+  img: https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0172495/?ref_=tt_sims_tt_t_11
+
+- title: The Departed
+  year:  2006
+  director: Martin Scorsese
+  img: https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0407887/?ref_=tt_sims_tt_t_7
+
+- title: A Beautiful Mind
+  year:  2001
+  director: Ron Howard
+  img: https://m.media-amazon.com/images/M/MV5BMzcwYWFkYzktZjAzNC00OGY1LWI4YTgtNzc5MzVjMDVmNjY0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0268978/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_a%2520beauti
+
+- title: Good Will Hunting
+  year:  1997
+  director: Gus Van Sant
+  img: https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0119217/?ref_=tt_sims_tt_t_1
+
+- title: Catch Me If You Can
+  year:  2002
+  director: Steven Spielberg
+  img: https://m.media-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0264464/?ref_=tt_sims_tt_t_4
+
+- title: Cidade Baixa
+  year:  2005
+  director: Sergio Machado
+  img: https://m.media-amazon.com/images/M/MV5BMjE5ODUxNDQ4NF5BMl5BanBnXkFtZTcwMjc4MzMzMQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0456899/?ref_=tt_sims_tt_t_9
+
+- title: Pretty Woman
+  year:  1990
+  director: Garry Marshall
+  img: https://m.media-amazon.com/images/M/MV5BNjk2ODQzNDYxNV5BMl5BanBnXkFtZTgwMTcyNDg4NjE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0100405/?ref_=nm_knf_t_1
+
+- title: L.A. Confidential
+  year:  1997
+  director: Curtis Hanson
+  img: https://m.media-amazon.com/images/M/MV5BMDQ2YzEyZGItYWRhOS00MjBmLTkzMDUtMTdjYzkyMmQxZTJlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0119488/?ref_=nm_knf_t_4
+
+- title: Casa Grande
+  year:  2014
+  director: Fellipe Barbosa
+  img: https://m.media-amazon.com/images/M/MV5BMTk0MTI4OTQ5NV5BMl5BanBnXkFtZTgwMzU5NzQyNzE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc
+
+- title: Collateral
+  year:  2004
+  director: Michael Mann
+  img: https://m.media-amazon.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0369339/?ref_=nm_knf_t_2
+
+- title: Rain Man
+  year:  1998
+  director: Barry Levinson
+  img: https://m.media-amazon.com/images/M/MV5BMzVjNzI4NzYtMjE4NS00M2IzLWFkOWMtOTYwMWUzN2ZlNGVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0095953/?ref_=tt_sims_tt_t_3
+
+- title: Ray
+  year:  2004
+  director: Taylor Hackford
+  img: https://m.media-amazon.com/images/M/MV5BMTQxNDQwNjQzOV5BMl5BanBnXkFtZTcwNTQxNDYyMQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0350258/?ref_=tt_sims_tt_i_3
+
+- title: Malcolm X
+  year:  1992
+  director: Spike Lee
+  img: https://m.media-amazon.com/images/M/MV5BZDkzOTFmMTUtMmI2OS00MDE4LTg5YTUtODMwNDMzNmI5OGYwL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0104797/?ref_=tt_sims_tt_i_10
+
+- title: Flight
+  year:  2012
+  director: Robert Zemeckis
+  img: https://m.media-amazon.com/images/M/MV5BMTUxMjI1OTMxNl5BMl5BanBnXkFtZTcwNjc3NTY1OA@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1907668/?ref_=tt_sims_tt_t_1
+
+- title: Fences
+  year:  2016
+  director: Denzel Washington
+  img: https://m.media-amazon.com/images/M/MV5BOTg0Nzc1NjA0MV5BMl5BanBnXkFtZTgwNTcyNDQ0MDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2671706/?ref_=tt_sims_tt_t_10
+
+- title: Sully
+  year:  2016
+  director: Clint Eastwood
+  img: https://m.media-amazon.com/images/M/MV5BY2NmZDAwM2QtZmFiMS00OTJlLTgxMTItZDMyZmVhYjE1MDY3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt3263904/?ref_=tt_sims_tt_i_3
+
+- title: Querô
+  year:  2007
+  director: Carlos Cortez
+  img: https://m.media-amazon.com/images/M/MV5BZTBmMzAyNDEtODM1MS00MjNmLWEzMDYtYTEwMjA2NzA0OTBiXkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0945383/?ref_=tt_sims_tt_t_3
+
+- title: Dunkirk
+  year:  2017
+  director: Christopher Nolan
+  img: https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt5013056/?ref_=tt_sims_tt_t_5
+
+- title: Captain Phillips
+  year:  2013
+  director: Paul Greengrass
+  img: https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1535109/?ref_=tt_sims_tt_t_1
+
+- title: American Sniper
+  year:  2014
+  director: Clint Eastwood
+  img: https://m.media-amazon.com/images/M/MV5BMTkxNzI3ODI4Nl5BMl5BanBnXkFtZTgwMjkwMjY4MjE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2179136/?ref_=tt_sims_tt_t_3
+
+- title: Sleepers
+  year:  1996
+  director: Barry Levinson
+  img: https://m.media-amazon.com/images/M/MV5BMzk1MmI4NzAtOGRiNS00YjY1LTllNmEtZDhiZDM4MjU2NTMxXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0117665/?ref_=tt_sims_tt_i_5
+
+- title: Hacksaw Ridge
+  year:  2016
+  director: Mel Gibson
+  img: https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2119532/?ref_=tt_sims_tt_t_6
+
+- title: The Imitation Game
+  year:  2014
+  director: Morten Tyldum
+  img: https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2084970/?ref_=tt_sims_tt_t_11
+
+- title: Fury
+  year:  2014
+  director: David Ayer
+  img: https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2713180/?ref_=tt_sims_tt_t_11
+
+- title: The Revenant
+  year:  2015
+  director: Alejandro G. Iñárritu
+  img: https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1663202/?ref_=tt_sims_tt_t_8
+
+- title: The Theory of Everything
+  year:  2014
+  director: James Marsh
+  img: https://m.media-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2980516/?ref_=tt_sims_tt_t_2
+
+- title: Wasp Network
+  year:  2019
+  director: Olivier Assayas
+  img: https://m.media-amazon.com/images/M/MV5BOWJkNjQxMjUtOGNhMC00MjJiLTg4OWQtYTdkNzYxMWE4NDQ1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt6760876/?ref_=nm_flmg_t_8_act
+
+- title: The Great Gatsby
+  year:  2013
+  director: Baz Luhrmann
+  img: https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1343092/?ref_=tt_sims_tt_t_9
+
+- title: The Boy in the Striped Pajamas
+  year:  2008
+  director: Mark Herman
+  img: https://m.media-amazon.com/images/M/MV5BMTMzMTc3MjA5NF5BMl5BanBnXkFtZTcwOTk3MDE5MQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0914798/?ref_=tt_sims_tt_t_12
+
+- title: The Curious Case of Benjamin Button
+  year:  2008
+  director: David Fincher
+  img: https://m.media-amazon.com/images/M/MV5BMzI4M2I1MTItYjdiYi00YTZhLTg0NDgtZWIzOGU5ZmM3NWZlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0421715/?ref_=tt_sims_tt_t_1
+
+- title: Once Upon a Time in... Hollywood
+  year:  2019
+  director: Quentin Tarantino
+  img: https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_once
+
+- title: Apocalypto
+  year:  2006
+  director: Mel Gibson
+  img: https://m.media-amazon.com/images/M/MV5BMzhmNGMzMDMtZDM0Yi00MmVmLWExYjAtZDhjZjcxZDM0MzJhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0472043/?ref_=nv_sr_srsg_3_tt_6_nm_2_q_apo
+
+- title: Apollo 13
+  year:  1995
+  director: Ron Howard
+  img: https://m.media-amazon.com/images/M/MV5BMjc4MzZlNmQtN2ZlOS00OGQzLWI5YjEtNDQ2YmZlN2FjNTIxXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0112384/?ref_=nv_sr_srsg_7_tt_6_nm_2_q_apo
+
+- title: 300
+  year:  2006
+  director: Zack Snyder
+  img: https://m.media-amazon.com/images/M/MV5BMjc4OTc0ODgwNV5BMl5BanBnXkFtZTcwNjM1ODE0MQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0416449/?ref_=nm_knf_t_1
+
+- title: Pearl Harbor
+  year:  2001
+  director: Michael Bay
+  img: https://m.media-amazon.com/images/M/MV5BMTQ3MDc0MDc1NF5BMl5BanBnXkFtZTYwODI1ODY2._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0213149/?ref_=tt_tpks_tt_t_20_pd_detail_2_pbr_ic
+
+- title: Robin Hood
+  year:  2010
+  director: Ridley Scott
+  img: https://m.media-amazon.com/images/M/MV5BMTM5NzcwMzEwOF5BMl5BanBnXkFtZTcwNjg5MTgwMw@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0955308/?ref_=tt_sims_tt_t_10
+
+- title: Master and Commander - The Far Side of the World
+  year:  2003
+  director: Peter Weir
+  img: https://m.media-amazon.com/images/M/MV5BZGRjM2IyM2EtZDAxYi00NTdjLTliMGYtMmRhZGUyNjRjNWYwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0311113/?ref_=tt_sims_tt_t_8
+
+- title: Titanic
+  year:  1997
+  director: James Cameron
+  img: https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0120338/?ref_=tt_tpks_tt_t_30_pd_detail_2_pbr_ic
+
+- title: Sergio
+  year:  2020
+  director: Greg Barker
+  img: https://m.media-amazon.com/images/M/MV5BMzIwYzQ3MTMtNjBjZC00M2ZiLTkzMzctYjZhOWM1ZTAxMTdiXkEyXkFqcGdeQXVyODkwODgyNTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt8750570/?ref_=nm_flmg_t_7_act
+
+- title: Richard Jewell
+  year:  2019
+  director: Clint Eastwood
+  img: https://m.media-amazon.com/images/M/MV5BOTFlODg1MTEtZTJhOC00OTY1LWE0YzctZjRlODdkYWY5ZDM4XkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt3513548/
+
+- title: The Flowers of War
+  year:  2011
+  director: Yimou Zhang
+  img: https://m.media-amazon.com/images/M/MV5BMjE3OTUzODA3Ml5BMl5BanBnXkFtZTcwNDk5NTUyNw@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1410063/
+
+- title: The Human Stain
+  year:  2003
+  director: Robert Benton
+  img: https://m.media-amazon.com/images/M/MV5BMTk5MjQyNTcxNV5BMl5BanBnXkFtZTcwMjcwNDAwMQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0308383/?ref_=fn_al_tt_1
+
+- title: The Long Walk Home
+  year:  1990
+  director: Richard Pearce
+  img: https://m.media-amazon.com/images/M/MV5BMDdhMWE5NjMtMmFhOC00ZDIyLWFjMzQtNDllOWRiYjhhZTM0XkEyXkFqcGdeQXVyMTUyNjc3NDQ4._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0100046/?ref_=fn_al_tt_3
+
+- title: A Time to Kill
+  year:  1996
+  director: Joel Schumacher
+  img: https://m.media-amazon.com/images/M/MV5BOWExZTg4ZWYtOTQxMi00YWZkLTkxYzgtOTg1MTUxNzNiNDcxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0117913/?ref_=fn_al_tt_1
+
+- title: Platoon
+  year:  1986
+  director: Oliver Stone
+  img: https://m.media-amazon.com/images/M/MV5BMzRjZjdlMjQtODVkYS00N2YzLWJlYWYtMGVlN2E5MWEwMWQzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0091763/?ref_=fn_al_tt_1
+
+- title: Dead Man Walking
+  year:  1995
+  director: Tim Robbins
+  img: https://m.media-amazon.com/images/M/MV5BMTM3NzA1MjM2N15BMl5BanBnXkFtZTcwMzY3MTMzNA@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0112818/?ref_=fn_al_tt_1
+
+- title: Capote
+  year:  2005
+  director: Bennett Miller
+  img: https://m.media-amazon.com/images/M/MV5BMTczMzU0MjM1MV5BMl5BanBnXkFtZTcwMjczNzgyNA@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0379725/?ref_=fn_al_tt_1
+
+- title: The Pianist
+  year:  2002
+  director: Roman Polanski
+  img: https://m.media-amazon.com/images/M/MV5BOWRiZDIxZjktMTA1NC00MDQ2LWEzMjUtMTliZmY3NjQ3ODJiXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0253474/?ref_=fn_al_tt_1
+
+- title: The Hunt
+  year:  2012
+  director: Thomas Vinterberg
+  img: https://m.media-amazon.com/images/M/MV5BMTg2NDg3ODg4NF5BMl5BanBnXkFtZTcwNzk3NTc3Nw@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt2106476/?ref_=fn_al_tt_1
+
+- title: Fracture
+  year:  2007
+  director: Gregory Hoblit
+  img: https://m.media-amazon.com/images/M/MV5BMzIzNjQyMzkwM15BMl5BanBnXkFtZTcwOTg5ODQ0MQ@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0488120/?ref_=tt_sims_tt_i_6
+
+- title: Girl, Interrupted
+  year:  1999
+  director: James Mangold
+  img: https://m.media-amazon.com/images/M/MV5BNzdjZDYwM2QtMGNlZS00MGQzLTlhMjctYTU4NWI5MWJlYmQwXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0172493/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_garota%2520inte
+
+- title: The Bone Collector
+  year:  1999
+  director: Phillip Noyce
+  img: https://m.media-amazon.com/images/M/MV5BMzMyMDYxZGItYzZmNi00YmI0LTljMzQtYzMzOTY2NmQ1ZGNkXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0145681/?ref_=tt_sims_tt_i_1
+
+- title: Vanilla Sky
+  year:  2001
+  director: Cameron Crowe
+  img: https://m.media-amazon.com/images/M/MV5BYzFlMTJjYzUtMWFjYy00NjkyLTg1Y2EtYmZkMjdlOGQ1ZGYwL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0259711/?ref_=tt_sims_tt_i_10
+
+- title: The Big Short
+  year:  2015
+  director: Adam McKay
+  img: https://m.media-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1596363/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_the%2520big
+
+- title: Moneyball
+  year:  2011
+  director: Bennett Miller
+  img: https://m.media-amazon.com/images/M/MV5BMjAxOTU3Mzc1M15BMl5BanBnXkFtZTcwMzk1ODUzNg@@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt1210166/?ref_=tt_sims_tt_i_1
+
+- title: Primal Fear
+  year:  1996
+  director: Gregory Hoblit
+  img: https://m.media-amazon.com/images/M/MV5BZTM2NWI2OGYtYWNhMi00ZTlmLTg2ZTAtMmI5NWRjODA5YTE1XkEyXkFqcGdeQXVyODE2OTYwNTg@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0117381/
+
+- title: Hidden Figures
+  year:  2016
+  director: Theodore Melfi
+  img: https://m.media-amazon.com/images/M/MV5BMzg2Mzg4YmUtNDdkNy00NWY1LWE3NmEtZWMwNGNlMzE5YzU3XkEyXkFqcGdeQXVyMjA5MTIzMjQ@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt4846340/
+
+- title: The Man Who Knew Infinity
+  year:  2015
+  director: Matt Brown
+  img: https://m.media-amazon.com/images/M/MV5BMTU3Njg4MDM3OV5BMl5BanBnXkFtZTgwMjE5ODM3ODE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0787524/

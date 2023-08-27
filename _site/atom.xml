@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-08-26T14:43:30-03:00</updated>
+ <updated>2023-08-27T11:14:25-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -1112,6 +1112,42 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
 
     
     &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0271383/?ref_=tt_sims_tt_t_2&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjMzMDA4ODktMTg5OS00NjQwLWI1MDgtMDZhODU2Yzg2MDQwXkEyXkFqcGdeQXVyNDEyNjEzOTg@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0271383/?ref_=tt_sims_tt_t_2&quot;&gt;O Auto da Compadecida&lt;/a&gt;
+        &lt;p&gt;Guel Arraes&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2000&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0317248/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_the%2520city%2520of%2520god&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTMwYjc5ZmItYTFjZC00ZGQ3LTlkNTMtMjZiNTZlMWQzNzI5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0317248/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_the%2520city%2520of%2520god&quot;&gt;Cidade de Deus&lt;/a&gt;
+        &lt;p&gt;Fernando Meirelles&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2002&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0078788/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_apo&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0078788/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_apo&quot;&gt;Apocalypse Now&lt;/a&gt;
+        &lt;p&gt;Francis Ford Coppola&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1979&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
         &lt;a href=&quot;https://www.imdb.com/title/tt0361748/&quot;&gt;
             &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
         &lt;/a&gt;
@@ -1136,14 +1172,62 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
 
     
     &lt;div class=&quot;movie-img&quot;&gt;
-        &lt;a href=&quot;https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc&quot;&gt;
-            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTk0MTI4OTQ5NV5BMl5BanBnXkFtZTgwMzU5NzQyNzE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0071877/?ref_=fn_al_tt_2&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNDlkZjJjYTktZDI4OS00MWFkLTg1MzMtNTY3MmI2OTBkMTU1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;a href=&quot;https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc&quot;&gt;Casa Grande&lt;/a&gt;
-        &lt;p&gt;Fellipe Barbosa&lt;/p&gt;
-        &lt;p class=&quot;movie-year&quot;&gt;2014&lt;/p&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0071877/?ref_=fn_al_tt_2&quot;&gt;Murder on the Orient Express&lt;/a&gt;
+        &lt;p&gt;Sidney Lumet&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1974&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0092099/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_top%2520gun&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZjQxYTA3ODItNzgxMy00N2Y2LWJlZGMtMTRlM2JkZjI1ZDhhXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0092099/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_top%2520gun&quot;&gt;Top Gun&lt;/a&gt;
+        &lt;p&gt;Tony Scott&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1986&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1745960/?ref_=nv_sr_srsg_3_tt_7_nm_1_q_top%2520gun&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1745960/?ref_=nv_sr_srsg_3_tt_7_nm_1_q_top%2520gun&quot;&gt;Top Gun - Maverick&lt;/a&gt;
+        &lt;p&gt;Joseph Kosinski&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2022&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0110322/?ref_=tt_tpks_tt_i_2_pd_detail_2_pbr_ic&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTYwMjYxNTAyN15BMl5BanBnXkFtZTgwMTc3MjkyMTE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0110322/?ref_=tt_tpks_tt_i_2_pd_detail_2_pbr_ic&quot;&gt;Legends of the Fall&lt;/a&gt;
+        &lt;p&gt;Edward Zwick&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1994&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0110413/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0110413/&quot;&gt;Léon - The Professional&lt;/a&gt;
+        &lt;p&gt;Luc Besson&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1994&lt;/p&gt;
     &lt;/div&gt;
 
     
@@ -1172,6 +1256,18 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
 
     
     &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt14168118/?ref_=nm_flmg_t_3_act&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNThmN2JlYmQtYzE5Zi00Y2QxLThlOWUtYWM3NTI5YTAwMjc4XkEyXkFqcGdeQXVyMTgxMzA4ODY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt14168118/?ref_=nm_flmg_t_3_act&quot;&gt;7 Prisioneiros&lt;/a&gt;
+        &lt;p&gt;Alexandre Moratto&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2021&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
         &lt;a href=&quot;https://www.imdb.com/title/tt1130884/?ref_=tt_sims_tt_t_3&quot;&gt;
             &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
         &lt;/a&gt;
@@ -1183,85 +1279,836 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
     &lt;/div&gt;
 
     
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0993846/?ref_=tt_sims_tt_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0993846/?ref_=tt_sims_tt_t_1&quot;&gt;The Wolf of Wall Street&lt;/a&gt;
+        &lt;p&gt;Martin Scorsese&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2013&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0137523/?ref_=tt_sims_tt_t_5&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0137523/?ref_=tt_sims_tt_t_5&quot;&gt;Fight Club&lt;/a&gt;
+        &lt;p&gt;David Fincher&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1999&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0109830/?ref_=tt_sims_tt_t_2&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0109830/?ref_=tt_sims_tt_t_2&quot;&gt;Forest Gump&lt;/a&gt;
+        &lt;p&gt;Robert Zemeckis&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1994&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0111161/?ref_=tt_sims_tt_t_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0111161/?ref_=tt_sims_tt_t_3&quot;&gt;The Shawshank Redemption&lt;/a&gt;
+        &lt;p&gt;Frank Darabont&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1994&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0263124/?ref_=tt_sims_tt_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BN2Y2MGE3OTUtMDhkZC00MmU1LTg5NTktYjExNGZmNjgzNjJiXkEyXkFqcGdeQXVyMTY2MzYyNzA@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0263124/?ref_=tt_sims_tt_t_1&quot;&gt;Bicho de Sete Cabeças&lt;/a&gt;
+        &lt;p&gt;Laís Bodanzky&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2000&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0108052/?ref_=tt_sims_tt_t_9&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0108052/?ref_=tt_sims_tt_t_9&quot;&gt;Schindler&apos;s List&lt;/a&gt;
+        &lt;p&gt;Steven Spielberg&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1993&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0195685/?ref_=nm_knf_t_2&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BYTA1NWRkNTktNDMxNS00NjE4LWEzMDAtNzA3YzlhYzRhNDA4L2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0195685/?ref_=nm_knf_t_2&quot;&gt;Erin Brockovich&lt;/a&gt;
+        &lt;p&gt;Steven Soderbergh&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2000&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0120815/?ref_=tt_sims_tt_t_6&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0120815/?ref_=tt_sims_tt_t_6&quot;&gt;Saving Private Ryan&lt;/a&gt;
+        &lt;p&gt;Steven Spielberg&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1998&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0113277/?ref_=tt_sims_tt_i_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BYjZjNTJlZGUtZTE1Ny00ZDc4LTgwYjUtMzk0NDgwYzZjYTk1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0113277/?ref_=tt_sims_tt_i_1&quot;&gt;Heat&lt;/a&gt;
+        &lt;p&gt;Michael Mann&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1995&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0293007/?ref_=adv_li_tt&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BYzcxZmRhNmYtMjNmMy00OGU1LWFmMzktYjAyYzFhNWJjYmFmXkEyXkFqcGdeQXVyMTUwNjg3NTUw._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0293007/?ref_=adv_li_tt&quot;&gt;Carandiru&lt;/a&gt;
+        &lt;p&gt;Hector Babenco&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2003&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0102926/?ref_=tt_sims_tt_t_7&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0102926/?ref_=tt_sims_tt_t_7&quot;&gt;The Silence of the Lambs&lt;/a&gt;
+        &lt;p&gt;Jonathan Demme&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1991&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0172495/?ref_=tt_sims_tt_t_11&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0172495/?ref_=tt_sims_tt_t_11&quot;&gt;Gladiator&lt;/a&gt;
+        &lt;p&gt;Ridley Scott&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2000&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0407887/?ref_=tt_sims_tt_t_7&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0407887/?ref_=tt_sims_tt_t_7&quot;&gt;The Departed&lt;/a&gt;
+        &lt;p&gt;Martin Scorsese&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2006&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0268978/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_a%2520beauti&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzcwYWFkYzktZjAzNC00OGY1LWI4YTgtNzc5MzVjMDVmNjY0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0268978/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_a%2520beauti&quot;&gt;A Beautiful Mind&lt;/a&gt;
+        &lt;p&gt;Ron Howard&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2001&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0119217/?ref_=tt_sims_tt_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0119217/?ref_=tt_sims_tt_t_1&quot;&gt;Good Will Hunting&lt;/a&gt;
+        &lt;p&gt;Gus Van Sant&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1997&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0264464/?ref_=tt_sims_tt_t_4&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0264464/?ref_=tt_sims_tt_t_4&quot;&gt;Catch Me If You Can&lt;/a&gt;
+        &lt;p&gt;Steven Spielberg&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2002&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0456899/?ref_=tt_sims_tt_t_9&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjE5ODUxNDQ4NF5BMl5BanBnXkFtZTcwMjc4MzMzMQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0456899/?ref_=tt_sims_tt_t_9&quot;&gt;Cidade Baixa&lt;/a&gt;
+        &lt;p&gt;Sergio Machado&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2005&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0100405/?ref_=nm_knf_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNjk2ODQzNDYxNV5BMl5BanBnXkFtZTgwMTcyNDg4NjE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0100405/?ref_=nm_knf_t_1&quot;&gt;Pretty Woman&lt;/a&gt;
+        &lt;p&gt;Garry Marshall&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1990&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0119488/?ref_=nm_knf_t_4&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMDQ2YzEyZGItYWRhOS00MjBmLTkzMDUtMTdjYzkyMmQxZTJlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0119488/?ref_=nm_knf_t_4&quot;&gt;L.A. Confidential&lt;/a&gt;
+        &lt;p&gt;Curtis Hanson&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1997&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTk0MTI4OTQ5NV5BMl5BanBnXkFtZTgwMzU5NzQyNzE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt3474994/?ref_=tt_mv_desc&quot;&gt;Casa Grande&lt;/a&gt;
+        &lt;p&gt;Fellipe Barbosa&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2014&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0369339/?ref_=nm_knf_t_2&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0369339/?ref_=nm_knf_t_2&quot;&gt;Collateral&lt;/a&gt;
+        &lt;p&gt;Michael Mann&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2004&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0095953/?ref_=tt_sims_tt_t_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzVjNzI4NzYtMjE4NS00M2IzLWFkOWMtOTYwMWUzN2ZlNGVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0095953/?ref_=tt_sims_tt_t_3&quot;&gt;Rain Man&lt;/a&gt;
+        &lt;p&gt;Barry Levinson&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1998&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0350258/?ref_=tt_sims_tt_i_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTQxNDQwNjQzOV5BMl5BanBnXkFtZTcwNTQxNDYyMQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0350258/?ref_=tt_sims_tt_i_3&quot;&gt;Ray&lt;/a&gt;
+        &lt;p&gt;Taylor Hackford&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2004&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0104797/?ref_=tt_sims_tt_i_10&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZDkzOTFmMTUtMmI2OS00MDE4LTg5YTUtODMwNDMzNmI5OGYwL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0104797/?ref_=tt_sims_tt_i_10&quot;&gt;Malcolm X&lt;/a&gt;
+        &lt;p&gt;Spike Lee&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1992&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1907668/?ref_=tt_sims_tt_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTUxMjI1OTMxNl5BMl5BanBnXkFtZTcwNjc3NTY1OA@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1907668/?ref_=tt_sims_tt_t_1&quot;&gt;Flight&lt;/a&gt;
+        &lt;p&gt;Robert Zemeckis&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2012&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2671706/?ref_=tt_sims_tt_t_10&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTg0Nzc1NjA0MV5BMl5BanBnXkFtZTgwNTcyNDQ0MDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2671706/?ref_=tt_sims_tt_t_10&quot;&gt;Fences&lt;/a&gt;
+        &lt;p&gt;Denzel Washington&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2016&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt3263904/?ref_=tt_sims_tt_i_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BY2NmZDAwM2QtZmFiMS00OTJlLTgxMTItZDMyZmVhYjE1MDY3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt3263904/?ref_=tt_sims_tt_i_3&quot;&gt;Sully&lt;/a&gt;
+        &lt;p&gt;Clint Eastwood&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2016&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0945383/?ref_=tt_sims_tt_t_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZTBmMzAyNDEtODM1MS00MjNmLWEzMDYtYTEwMjA2NzA0OTBiXkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0945383/?ref_=tt_sims_tt_t_3&quot;&gt;Querô&lt;/a&gt;
+        &lt;p&gt;Carlos Cortez&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2007&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt5013056/?ref_=tt_sims_tt_t_5&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt5013056/?ref_=tt_sims_tt_t_5&quot;&gt;Dunkirk&lt;/a&gt;
+        &lt;p&gt;Christopher Nolan&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2017&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1535109/?ref_=tt_sims_tt_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BODhiZWRhMjctNDUyMS00NmUwLTgwYmItMjJhOWNkZWQ3ZTQxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1535109/?ref_=tt_sims_tt_t_1&quot;&gt;Captain Phillips&lt;/a&gt;
+        &lt;p&gt;Paul Greengrass&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2013&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2179136/?ref_=tt_sims_tt_t_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTkxNzI3ODI4Nl5BMl5BanBnXkFtZTgwMjkwMjY4MjE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2179136/?ref_=tt_sims_tt_t_3&quot;&gt;American Sniper&lt;/a&gt;
+        &lt;p&gt;Clint Eastwood&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2014&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0117665/?ref_=tt_sims_tt_i_5&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzk1MmI4NzAtOGRiNS00YjY1LTllNmEtZDhiZDM4MjU2NTMxXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0117665/?ref_=tt_sims_tt_i_5&quot;&gt;Sleepers&lt;/a&gt;
+        &lt;p&gt;Barry Levinson&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1996&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2119532/?ref_=tt_sims_tt_t_6&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2119532/?ref_=tt_sims_tt_t_6&quot;&gt;Hacksaw Ridge&lt;/a&gt;
+        &lt;p&gt;Mel Gibson&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2016&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2084970/?ref_=tt_sims_tt_t_11&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNjI3NjY1Mjg3MV5BMl5BanBnXkFtZTgwMzk5MDQ3MjE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2084970/?ref_=tt_sims_tt_t_11&quot;&gt;The Imitation Game&lt;/a&gt;
+        &lt;p&gt;Morten Tyldum&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2014&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2713180/?ref_=tt_sims_tt_t_11&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2713180/?ref_=tt_sims_tt_t_11&quot;&gt;Fury&lt;/a&gt;
+        &lt;p&gt;David Ayer&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2014&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1663202/?ref_=tt_sims_tt_t_8&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1663202/?ref_=tt_sims_tt_t_8&quot;&gt;The Revenant&lt;/a&gt;
+        &lt;p&gt;Alejandro G. Iñárritu&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2015&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2980516/?ref_=tt_sims_tt_t_2&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2980516/?ref_=tt_sims_tt_t_2&quot;&gt;The Theory of Everything&lt;/a&gt;
+        &lt;p&gt;James Marsh&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2014&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt6760876/?ref_=nm_flmg_t_8_act&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOWJkNjQxMjUtOGNhMC00MjJiLTg4OWQtYTdkNzYxMWE4NDQ1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt6760876/?ref_=nm_flmg_t_8_act&quot;&gt;Wasp Network&lt;/a&gt;
+        &lt;p&gt;Olivier Assayas&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2019&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1343092/?ref_=tt_sims_tt_t_9&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1343092/?ref_=tt_sims_tt_t_9&quot;&gt;The Great Gatsby&lt;/a&gt;
+        &lt;p&gt;Baz Luhrmann&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2013&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0914798/?ref_=tt_sims_tt_t_12&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTMzMTc3MjA5NF5BMl5BanBnXkFtZTcwOTk3MDE5MQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0914798/?ref_=tt_sims_tt_t_12&quot;&gt;The Boy in the Striped Pajamas&lt;/a&gt;
+        &lt;p&gt;Mark Herman&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2008&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0421715/?ref_=tt_sims_tt_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzI4M2I1MTItYjdiYi00YTZhLTg0NDgtZWIzOGU5ZmM3NWZlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0421715/?ref_=tt_sims_tt_t_1&quot;&gt;The Curious Case of Benjamin Button&lt;/a&gt;
+        &lt;p&gt;David Fincher&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2008&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_once&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_once&quot;&gt;Once Upon a Time in... Hollywood&lt;/a&gt;
+        &lt;p&gt;Quentin Tarantino&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2019&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0472043/?ref_=nv_sr_srsg_3_tt_6_nm_2_q_apo&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzhmNGMzMDMtZDM0Yi00MmVmLWExYjAtZDhjZjcxZDM0MzJhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0472043/?ref_=nv_sr_srsg_3_tt_6_nm_2_q_apo&quot;&gt;Apocalypto&lt;/a&gt;
+        &lt;p&gt;Mel Gibson&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2006&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0112384/?ref_=nv_sr_srsg_7_tt_6_nm_2_q_apo&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjc4MzZlNmQtN2ZlOS00OGQzLWI5YjEtNDQ2YmZlN2FjNTIxXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0112384/?ref_=nv_sr_srsg_7_tt_6_nm_2_q_apo&quot;&gt;Apollo 13&lt;/a&gt;
+        &lt;p&gt;Ron Howard&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1995&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0416449/?ref_=nm_knf_t_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjc4OTc0ODgwNV5BMl5BanBnXkFtZTcwNjM1ODE0MQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0416449/?ref_=nm_knf_t_1&quot;&gt;300&lt;/a&gt;
+        &lt;p&gt;Zack Snyder&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2006&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0213149/?ref_=tt_tpks_tt_t_20_pd_detail_2_pbr_ic&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTQ3MDc0MDc1NF5BMl5BanBnXkFtZTYwODI1ODY2._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0213149/?ref_=tt_tpks_tt_t_20_pd_detail_2_pbr_ic&quot;&gt;Pearl Harbor&lt;/a&gt;
+        &lt;p&gt;Michael Bay&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2001&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0955308/?ref_=tt_sims_tt_t_10&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTM5NzcwMzEwOF5BMl5BanBnXkFtZTcwNjg5MTgwMw@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0955308/?ref_=tt_sims_tt_t_10&quot;&gt;Robin Hood&lt;/a&gt;
+        &lt;p&gt;Ridley Scott&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2010&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0311113/?ref_=tt_sims_tt_t_8&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZGRjM2IyM2EtZDAxYi00NTdjLTliMGYtMmRhZGUyNjRjNWYwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0311113/?ref_=tt_sims_tt_t_8&quot;&gt;Master and Commander - The Far Side of the World&lt;/a&gt;
+        &lt;p&gt;Peter Weir&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2003&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0120338/?ref_=tt_tpks_tt_t_30_pd_detail_2_pbr_ic&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0120338/?ref_=tt_tpks_tt_t_30_pd_detail_2_pbr_ic&quot;&gt;Titanic&lt;/a&gt;
+        &lt;p&gt;James Cameron&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1997&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt8750570/?ref_=nm_flmg_t_7_act&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzIwYzQ3MTMtNjBjZC00M2ZiLTkzMzctYjZhOWM1ZTAxMTdiXkEyXkFqcGdeQXVyODkwODgyNTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt8750570/?ref_=nm_flmg_t_7_act&quot;&gt;Sergio&lt;/a&gt;
+        &lt;p&gt;Greg Barker&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2020&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt3513548/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOTFlODg1MTEtZTJhOC00OTY1LWE0YzctZjRlODdkYWY5ZDM4XkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt3513548/&quot;&gt;Richard Jewell&lt;/a&gt;
+        &lt;p&gt;Clint Eastwood&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2019&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1410063/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjE3OTUzODA3Ml5BMl5BanBnXkFtZTcwNDk5NTUyNw@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1410063/&quot;&gt;The Flowers of War&lt;/a&gt;
+        &lt;p&gt;Yimou Zhang&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2011&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0308383/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTk5MjQyNTcxNV5BMl5BanBnXkFtZTcwMjcwNDAwMQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0308383/?ref_=fn_al_tt_1&quot;&gt;The Human Stain&lt;/a&gt;
+        &lt;p&gt;Robert Benton&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2003&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0100046/?ref_=fn_al_tt_3&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMDdhMWE5NjMtMmFhOC00ZDIyLWFjMzQtNDllOWRiYjhhZTM0XkEyXkFqcGdeQXVyMTUyNjc3NDQ4._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0100046/?ref_=fn_al_tt_3&quot;&gt;The Long Walk Home&lt;/a&gt;
+        &lt;p&gt;Richard Pearce&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1990&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0117913/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOWExZTg4ZWYtOTQxMi00YWZkLTkxYzgtOTg1MTUxNzNiNDcxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0117913/?ref_=fn_al_tt_1&quot;&gt;A Time to Kill&lt;/a&gt;
+        &lt;p&gt;Joel Schumacher&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1996&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0091763/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzRjZjdlMjQtODVkYS00N2YzLWJlYWYtMGVlN2E5MWEwMWQzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0091763/?ref_=fn_al_tt_1&quot;&gt;Platoon&lt;/a&gt;
+        &lt;p&gt;Oliver Stone&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1986&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0112818/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTM3NzA1MjM2N15BMl5BanBnXkFtZTcwMzY3MTMzNA@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0112818/?ref_=fn_al_tt_1&quot;&gt;Dead Man Walking&lt;/a&gt;
+        &lt;p&gt;Tim Robbins&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1995&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0379725/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTczMzU0MjM1MV5BMl5BanBnXkFtZTcwMjczNzgyNA@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0379725/?ref_=fn_al_tt_1&quot;&gt;Capote&lt;/a&gt;
+        &lt;p&gt;Bennett Miller&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2005&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0253474/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOWRiZDIxZjktMTA1NC00MDQ2LWEzMjUtMTliZmY3NjQ3ODJiXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0253474/?ref_=fn_al_tt_1&quot;&gt;The Pianist&lt;/a&gt;
+        &lt;p&gt;Roman Polanski&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2002&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2106476/?ref_=fn_al_tt_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTg2NDg3ODg4NF5BMl5BanBnXkFtZTcwNzk3NTc3Nw@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt2106476/?ref_=fn_al_tt_1&quot;&gt;The Hunt&lt;/a&gt;
+        &lt;p&gt;Thomas Vinterberg&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2012&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0488120/?ref_=tt_sims_tt_i_6&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzIzNjQyMzkwM15BMl5BanBnXkFtZTcwOTg5ODQ0MQ@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0488120/?ref_=tt_sims_tt_i_6&quot;&gt;Fracture&lt;/a&gt;
+        &lt;p&gt;Gregory Hoblit&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2007&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0172493/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_garota%2520inte&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNzdjZDYwM2QtMGNlZS00MGQzLTlhMjctYTU4NWI5MWJlYmQwXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0172493/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_garota%2520inte&quot;&gt;Girl, Interrupted&lt;/a&gt;
+        &lt;p&gt;James Mangold&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1999&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0145681/?ref_=tt_sims_tt_i_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzMyMDYxZGItYzZmNi00YmI0LTljMzQtYzMzOTY2NmQ1ZGNkXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0145681/?ref_=tt_sims_tt_i_1&quot;&gt;The Bone Collector&lt;/a&gt;
+        &lt;p&gt;Phillip Noyce&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1999&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0259711/?ref_=tt_sims_tt_i_10&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BYzFlMTJjYzUtMWFjYy00NjkyLTg1Y2EtYmZkMjdlOGQ1ZGYwL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0259711/?ref_=tt_sims_tt_i_10&quot;&gt;Vanilla Sky&lt;/a&gt;
+        &lt;p&gt;Cameron Crowe&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2001&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1596363/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_the%2520big&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1596363/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_the%2520big&quot;&gt;The Big Short&lt;/a&gt;
+        &lt;p&gt;Adam McKay&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2015&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1210166/?ref_=tt_sims_tt_i_1&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjAxOTU3Mzc1M15BMl5BanBnXkFtZTcwMzk1ODUzNg@@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1210166/?ref_=tt_sims_tt_i_1&quot;&gt;Moneyball&lt;/a&gt;
+        &lt;p&gt;Bennett Miller&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2011&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0117381/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BZTM2NWI2OGYtYWNhMi00ZTlmLTg2ZTAtMmI5NWRjODA5YTE1XkEyXkFqcGdeQXVyODE2OTYwNTg@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0117381/&quot;&gt;Primal Fear&lt;/a&gt;
+        &lt;p&gt;Gregory Hoblit&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1996&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt4846340/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMzg2Mzg4YmUtNDdkNy00NWY1LWE3NmEtZWMwNGNlMzE5YzU3XkEyXkFqcGdeQXVyMjA5MTIzMjQ@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt4846340/&quot;&gt;Hidden Figures&lt;/a&gt;
+        &lt;p&gt;Theodore Melfi&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2016&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0787524/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMTU3Njg4MDM3OV5BMl5BanBnXkFtZTgwMjE5ODM3ODE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0787524/&quot;&gt;The Man Who Knew Infinity&lt;/a&gt;
+        &lt;p&gt;Matt Brown&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2015&lt;/p&gt;
+    &lt;/div&gt;
+
+    
 
 &lt;/div&gt;
-
-&lt;!-- - [The Wolf of Wall Street (2013)](https://www.imdb.com/title/tt0993846/?ref_=tt_sims_tt_t_1) [[Martin Scorsese]](https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1)
-- [Fight Club (1999)](https://www.imdb.com/title/tt0137523/?ref_=tt_sims_tt_t_5) [[David Fincher]](https://www.imdb.com/name/nm0000399/?ref_=tt_cl_dr_1)
-- [Forrest Gump (1994)](https://www.imdb.com/title/tt0109830/?ref_=tt_sims_tt_t_2) [[Robert Zemeckis]](https://www.imdb.com/name/nm0000709/?ref_=tt_cl_dr_1)
-- [The Shawshank Redemption (1994)](https://www.imdb.com/title/tt0111161/?ref_=tt_sims_tt_t_3) [[Frank Darabont]](https://www.imdb.com/name/nm0001104/?ref_=tt_cl_dr_1)
-- [Schindler&apos;s List (1993)](https://www.imdb.com/title/tt0108052/?ref_=tt_sims_tt_t_9) [[Steven Spielberg]](https://www.imdb.com/name/nm0000229/?ref_=tt_cl_dr_1)
-- [Saving Private Ryan (1998)](https://www.imdb.com/title/tt0120815/?ref_=tt_sims_tt_t_6) [[Steven Spielberg]](https://www.imdb.com/name/nm0000229/?ref_=tt_cl_dr_1)
-- [The Silence of the Lambs (1991)](https://www.imdb.com/title/tt0102926/?ref_=tt_sims_tt_t_7) [[Jonathan Demme]](https://www.imdb.com/name/nm0001129/?ref_=tt_cl_dr_1)
-- [Gladiator (2000)](https://www.imdb.com/title/tt0172495/?ref_=tt_sims_tt_t_11) [[Ridley Scott]](https://www.imdb.com/name/nm0000631/?ref_=tt_cl_dr_1)
-- [The Departed (2006)](https://www.imdb.com/title/tt0407887/?ref_=tt_sims_tt_t_7) [[Martin Scorsese]](https://www.imdb.com/name/nm0000217/?ref_=tt_cl_dr_1)
-- [A Beautiful Mind (2001)](https://www.imdb.com/title/tt0268978/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_a%2520beauti) [[Ron Howard]](https://www.imdb.com/name/nm0000165/?ref_=tt_cl_dr_1)
-- [Good Will Hunting (1997)](https://www.imdb.com/title/tt0119217/?ref_=tt_sims_tt_t_1) [[Gus Van Sant]](https://www.imdb.com/name/nm0001814/?ref_=tt_cl_dr_1)
-- [O Auto da Compadecida (2000)](https://www.imdb.com/title/tt0271383/?ref_=tt_sims_tt_t_2) [[Guel Arraes]](https://www.imdb.com/name/nm0037136/?ref_=tt_cl_dr_1)
-- [Catch Me If You Can (2002)](https://www.imdb.com/title/tt0264464/?ref_=tt_sims_tt_t_4) [[Steven Spielberg]](https://www.imdb.com/name/nm0000229/?ref_=tt_cl_dr_1)
-- [Cidade Baixa (2005)](https://www.imdb.com/title/tt0456899/?ref_=tt_sims_tt_t_9) [[Sergio Machado]](https://www.imdb.com/name/nm0532509/?ref_=tt_cl_dr_1)
-- [Pretty Woman (1990)](https://www.imdb.com/title/tt0100405/?ref_=nm_knf_t_1) [[Garry Marshall]](https://www.imdb.com/name/nm0005190/?ref_=tt_cl_dr_1)
-- [Erin Brockovich (2000)](https://www.imdb.com/title/tt0195685/?ref_=nm_knf_t_2) [[Steven Soderbergh]](https://www.imdb.com/name/nm0001752/?ref_=tt_cl_dr_1)
-- [L.A. Confidential (1997)](https://www.imdb.com/title/tt0119488/?ref_=nm_knf_t_4) [[Curtis Hanson]](https://www.imdb.com/name/nm0000436/?ref_=tt_cl_dr_1)
-- [Heat (1995)](https://www.imdb.com/title/tt0113277/?ref_=tt_sims_tt_i_1) [[Michael Mann]](https://www.imdb.com/name/nm0000520/?ref_=tt_cl_dr_1)
-- [Collateral (2004)](https://www.imdb.com/title/tt0369339/?ref_=nm_knf_t_2) [[Michael Mann]](https://www.imdb.com/name/nm0000520/?ref_=tt_cl_dr_1)
-- [Rain Man (1988)](https://www.imdb.com/title/tt0095953/?ref_=tt_sims_tt_t_3) [[Barry Levinson]](https://www.imdb.com/name/nm0001469/?ref_=tt_cl_dr_1)
-- [Ray (2004)](https://www.imdb.com/title/tt0350258/?ref_=tt_sims_tt_i_3) [[Taylor Hackford]](https://www.imdb.com/name/nm0000431/?ref_=tt_cl_dr_1)
-- [Malcolm X (1992)](https://www.imdb.com/title/tt0104797/?ref_=tt_sims_tt_i_10) [[Spike Lee]](https://www.imdb.com/name/nm0000490/?ref_=tt_cl_dr_1)
-- [Fences (2016)](https://www.imdb.com/title/tt2671706/?ref_=tt_sims_tt_t_10) [[Denzel Washington]](https://www.imdb.com/name/nm0000243/?ref_=tt_cl_dr_1)
-- [Flight (2012)](https://www.imdb.com/title/tt1907668/?ref_=tt_sims_tt_t_1) [[Robert Zemeckis]](https://www.imdb.com/name/nm0000709/?ref_=tt_cl_dr_1)
-- [Sully (2016)](https://www.imdb.com/title/tt3263904/?ref_=tt_sims_tt_i_3) [[Clint Eastwood]](https://www.imdb.com/name/nm0000142/?ref_=tt_cl_dr_1)
-- [Captain Phillips (2013)](https://www.imdb.com/title/tt1535109/?ref_=tt_sims_tt_t_1) [[Paul Greengrass]](https://www.imdb.com/name/nm0339030/?ref_=tt_cl_dr_1)
-- [American Sniper (2014)](https://www.imdb.com/title/tt2179136/?ref_=tt_sims_tt_t_3) [[Clint Eastwood]](https://www.imdb.com/name/nm0000142/?ref_=tt_cl_dr_1)
-- [Hacksaw Ridge (2016)](https://www.imdb.com/title/tt2119532/?ref_=tt_sims_tt_t_6) [[Mel Gibson]](https://www.imdb.com/name/nm0000154/?ref_=tt_cl_dr_1)
-- [Fury (2014)](https://www.imdb.com/title/tt2713180/?ref_=tt_sims_tt_t_11) [[David Ayer]](https://www.imdb.com/name/nm0043742/?ref_=tt_cl_dr_1)
-- [The Imitation Game (2014)](https://www.imdb.com/title/tt2084970/?ref_=tt_sims_tt_t_11) [[Morten Tyldum]](https://www.imdb.com/name/nm0878763/?ref_=tt_cl_dr_1)
-- [Cidade de Deus (2002)](https://www.imdb.com/title/tt0317248/?ref_=nv_sr_srsg_0_tt_4_nm_4_q_the%2520city%2520of%2520god) [[Fernando Meirelles]](https://www.imdb.com/name/nm0576987/?ref_=tt_cl_dr_1) and [[Kária Lund]](https://www.imdb.com/name/nm0526199/?ref_=tt_cl_dr_2)
-- [Querô (2007)](https://www.imdb.com/title/tt0945383/?ref_=tt_sims_tt_t_3) [[Carlos Cortez]](https://www.imdb.com/name/nm2512885/?ref_=tt_cl_dr_1)
-- [Dunkirk (2017)](https://www.imdb.com/title/tt5013056/?ref_=tt_sims_tt_t_5) [[Christopher Nolan]](https://www.imdb.com/name/nm0634240/?ref_=tt_cl_dr_1)
-- [The Revenant (2015)](https://www.imdb.com/title/tt1663202/?ref_=tt_sims_tt_t_8) [[Alejandro G. Iñárritu]](https://www.imdb.com/name/nm0327944/?ref_=tt_cl_dr_1)
-- [The Great Gatsby (2013)](https://www.imdb.com/title/tt1343092/?ref_=tt_sims_tt_t_9) [[Baz Luhrmann]](https://www.imdb.com/name/nm0525303/?ref_=tt_cl_dr_1)
-- [The Theory of Everything (2014)](https://www.imdb.com/title/tt2980516/?ref_=tt_sims_tt_t_2) [[James Marsh]](https://www.imdb.com/name/nm1016428/?ref_=tt_cl_dr_1)
-- [The Boy in the Striped Pajamas (2008)](https://www.imdb.com/title/tt0914798/?ref_=tt_sims_tt_t_12) [[Mark Herman]](https://www.imdb.com/name/nm0379179/?ref_=tt_cl_dr_1)
-- [Bicho de Sete Cabeças (2000)](https://www.imdb.com/title/tt0263124/?ref_=tt_sims_tt_t_1) [[Laís Bodanzky]](https://www.imdb.com/name/nm1738698/?ref_=tt_cl_dr_1)
-- [The Curious Case of Benjamin Button (2008)](https://www.imdb.com/title/tt0421715/?ref_=tt_sims_tt_t_1) [[David Fincher]](https://www.imdb.com/name/nm0000399/?ref_=tt_cl_dr_1)
-- [Once Upon a Time in... Hollywood (2019)](https://www.imdb.com/title/tt7131622/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_once) [[Quentin Tarantino]](https://www.imdb.com/name/nm0000233/?ref_=tt_cl_dr_1)
-- [Apocalypto (2006)](https://www.imdb.com/title/tt0472043/?ref_=nv_sr_srsg_3_tt_6_nm_2_q_apo) [[Mel Gibson]](https://www.imdb.com/name/nm0000154/?ref_=tt_cl_dr_1)
-- [Apocalypse Now (1979)](https://www.imdb.com/title/tt0078788/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_apo) [[Francis Ford Coppola]](https://www.imdb.com/name/nm0000338/?ref_=tt_cl_dr_1)
-- [Apollo 13 (1995)](https://www.imdb.com/title/tt0112384/?ref_=nv_sr_srsg_7_tt_6_nm_2_q_apo) [[Ron Howard]](https://www.imdb.com/name/nm0000165/?ref_=tt_cl_dr_1)
-- [300 (2006)](https://www.imdb.com/title/tt0416449/?ref_=nm_knf_t_1) [[Zack Snyder]](https://www.imdb.com/name/nm0811583/?ref_=tt_cl_dr_1)
-- [7 Prisioneiros (2021)](https://www.imdb.com/title/tt14168118/?ref_=nm_flmg_t_3_act) [[Alexandre Moratto]](https://www.imdb.com/name/nm2910292/?ref_=tt_cl_dr_1)
-- [Pearl Harbor (2001)](https://www.imdb.com/title/tt0213149/?ref_=tt_tpks_tt_t_20_pd_detail_2_pbr_ic) [[Michael Bay]](https://www.imdb.com/name/nm0000881/?ref_=tt_cl_dr_1)
-- [Robin Hood (2010)](https://www.imdb.com/title/tt0955308/?ref_=tt_sims_tt_t_10) [[Ridley Scott]](https://www.imdb.com/name/nm0000631/?ref_=tt_cl_dr_1)
-- [Master and Commander: The Far Side of the World (2003)](https://www.imdb.com/title/tt0311113/?ref_=tt_sims_tt_t_8) [[Peter Weir]](https://www.imdb.com/name/nm0001837/?ref_=tt_cl_dr_1)
-- [Titanic (1997)](https://www.imdb.com/title/tt0120338/?ref_=tt_tpks_tt_t_30_pd_detail_2_pbr_ic) [[James Cameron]](https://www.imdb.com/name/nm0000116/?ref_=tt_cl_dr_1)
-- [Carandiru (2003)](https://www.imdb.com/title/tt0293007/?ref_=adv_li_tt) [[Hector Babenco]](https://www.imdb.com/name/nm0002199/?ref_=tt_cl_dr_1)
-- [Sergio (2020)](https://www.imdb.com/title/tt8750570/?ref_=nm_flmg_t_7_act) [[Greg Barker]](https://www.imdb.com/name/nm0994499/?ref_=tt_cl_dr_1)
-- [Wasp Network (2019)](https://www.imdb.com/title/tt6760876/?ref_=nm_flmg_t_8_act) [[Olivier Assayas]](https://www.imdb.com/name/nm0000801/?ref_=tt_cl_dr_1)
-- [Richard Jewell (2019)](https://www.imdb.com/title/tt3513548/) [[Clint Eastwood]](https://www.imdb.com/name/nm0000142/?ref_=tt_cl_dr_1)
-- [The Flowers of War (2011)](https://www.imdb.com/title/tt1410063/) [[Yimou Zhang]](https://www.imdb.com/name/nm0955443/?ref_=tt_cl_dr_1)
-- [The Human Stain (2003)](https://www.imdb.com/title/tt0308383/?ref_=fn_al_tt_1) [[Robert Benton]](https://www.imdb.com/name/nm0000914/?ref_=tt_cl_dr_1)
-- [The Long Walk Home (1990)](https://www.imdb.com/title/tt0100046/?ref_=fn_al_tt_3) [[Richard Pearce]](https://www.imdb.com/name/nm0669004/?ref_=tt_cl_dr_1)
-- [A Time to Kill (1996)](https://www.imdb.com/title/tt0117913/?ref_=fn_al_tt_1) [[Joel Schumacher]](https://www.imdb.com/name/nm0001708/?ref_=tt_cl_dr_1)
-- [Platoon (1986)](https://www.imdb.com/title/tt0091763/?ref_=fn_al_tt_1) [[Oliver Stone]](https://www.imdb.com/name/nm0000231/?ref_=tt_cl_dr_1)
-- [Murder on the Orient Express (1974)](https://www.imdb.com/title/tt0071877/?ref_=fn_al_tt_2) [[Sidney Lumet]](https://www.imdb.com/name/nm0001486/?ref_=tt_cl_dr_1)
-- [Dead Man Walking (1995)](https://www.imdb.com/title/tt0112818/?ref_=fn_al_tt_1) [[Tim Robbins]](https://www.imdb.com/name/nm0000209/?ref_=tt_cl_dr_1)
-- [Capote (2005)](https://www.imdb.com/title/tt0379725/?ref_=fn_al_tt_1) [[Bennett Miller]](https://www.imdb.com/name/nm0587955/?ref_=tt_cl_dr_1)
-- [The Pianist (2005)](https://www.imdb.com/title/tt0253474/?ref_=fn_al_tt_1) [[Roman Polanski]](https://www.imdb.com/name/nm0000591/?ref_=tt_cl_dr_1)
-- [The Hunt (2012)](https://www.imdb.com/title/tt2106476/?ref_=fn_al_tt_1) [[Thomas Vinterberg]](https://www.imdb.com/name/nm0899121/?ref_=tt_cl_dr_1)
-- [Sleepers (1996)](https://www.imdb.com/title/tt0117665/?ref_=tt_sims_tt_i_5) [[Barry Levinson]](https://www.imdb.com/name/nm0001469/?ref_=tt_cl_dr_1)
-- [Fracture (2007)](https://www.imdb.com/title/tt0488120/?ref_=tt_sims_tt_i_6) [[Gregory Hoblit]](https://www.imdb.com/name/nm0387706/?ref_=tt_cl_dr_1)
-- [Girl, Interrupted (1999)](https://www.imdb.com/title/tt0172493/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_garota%2520inte) [[James Mangold]](https://www.imdb.com/name/nm0003506/?ref_=tt_cl_dr_1)
-- [The Bone Collector (1999)](https://www.imdb.com/title/tt0145681/?ref_=tt_sims_tt_i_1) [[Phillip Noyce]](https://www.imdb.com/name/nm0637518/?ref_=tt_cl_dr_1)
-- [Vanilla Sky (2001)](https://www.imdb.com/title/tt0259711/?ref_=tt_sims_tt_i_10) [[Cameron Crowe]](https://www.imdb.com/name/nm0001081/?ref_=tt_cl_dr_1)
-- [Top Gun (1986)](https://www.imdb.com/title/tt0092099/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_top%2520gun) [[Tony Scott]](https://www.imdb.com/name/nm0001716/?ref_=tt_cl_dr_1)
-- [Top Gun: Maverick (2022)](https://www.imdb.com/title/tt1745960/?ref_=nv_sr_srsg_3_tt_7_nm_1_q_top%2520gun) [[Joseph Kosinski]](https://www.imdb.com/name/nm2676052/?ref_=tt_cl_dr_1)
-- [The Big Short (2015)](https://www.imdb.com/title/tt1596363/?ref_=nv_sr_srsg_3_tt_8_nm_0_q_the%2520big) [[Adam McKay]](https://www.imdb.com/name/nm0570912/?ref_=tt_cl_dr_1)
-- [Moneyball (2011)](https://www.imdb.com/title/tt1210166/?ref_=tt_sims_tt_i_1) [[Bennett Miller]](https://www.imdb.com/name/nm0587955/?ref_=tt_cl_dr_1)
-- [Legends of the Fall (1994)](https://www.imdb.com/title/tt0110322/?ref_=tt_tpks_tt_i_2_pd_detail_2_pbr_ic) [[Edward Zwick]](https://www.imdb.com/name/nm0001880/?ref_=tt_cl_dr_1)
-- [Primal Fear (1996)](https://www.imdb.com/title/tt0117381/) [[Gregory Hoblit]](https://www.imdb.com/name/nm0387706/?ref_=tt_cl_dr_1)
-- [Hidden Figures (2016)](https://www.imdb.com/title/tt4846340/) [[Theodore Melfi]](https://www.imdb.com/name/nm0577647/?ref_=tt_cl_dr_1)
-- [Léon: The Professional (1994)](https://www.imdb.com/title/tt0110413/) [[Luc Besson]](https://www.imdb.com/name/nm0000108/?ref_=tt_cl_dr_1) --&gt;
 
 </content>
  </entry>
