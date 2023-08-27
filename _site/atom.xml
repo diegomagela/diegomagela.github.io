@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-08-27T12:27:14-03:00</updated>
+ <updated>2023-08-27T19:01:30-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -1156,6 +1156,18 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
    <content type="html">&lt;p&gt;As rating and criticizing a movie is not an easy task for a non-film critic, this list is just a compilation of the movies that I consider the best. It is not arranged in any particular order.&lt;/p&gt;
 
 &lt;div class=&quot;wrapper-movie&quot;&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0071360/&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BNzAwZWRhZTEtOWYwMi00YzQ5LWE1MzQtM2JlZWE0Y2E4ZDg3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0071360/&quot;&gt;The Conversation&lt;/a&gt;
+        &lt;p&gt;Francis Ford Coppola&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1974&lt;/p&gt;
+    &lt;/div&gt;
 
     
     &lt;div class=&quot;movie-img&quot;&gt;
