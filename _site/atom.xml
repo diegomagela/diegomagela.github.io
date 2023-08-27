@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-08-27T11:14:25-03:00</updated>
+ <updated>2023-08-27T12:27:14-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -19,6 +19,8 @@
    <id>http://localhost:4000/2023/08/21/useful-linux-command</id>
    <content type="html">&lt;p&gt;I am a huge fan and enthusiastic of Linux. This is not exclusively due to the fact that it is free, ‘‘&lt;a href=&quot;https://www.gnu.org/philosophy/open-source-misses-the-point.html&quot;&gt;free speech, not free beer&lt;/a&gt;’’. Its strong terminal-based commands appear to be a great opportunity to perform repetitive tasks very easily with little knowledge of &lt;a href=&quot;https://www.gnu.org/software/bash/&quot;&gt;bash&lt;/a&gt;. As I am into academia, I will show useful command-line programs to facilitate academic-related tasks. Nonetheless, all code shown here can be easily used and/or adapted for other tasks.&lt;/p&gt;
 
+&lt;h3 id=&quot;convert-images&quot;&gt;Convert images&lt;/h3&gt;
+
 &lt;p&gt;A frequent task is to convert a set of images from one file extension to another. A very powerful program to perform this is &lt;a href=&quot;https://imagemagick.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageMagick&lt;/code&gt;&lt;/a&gt;. As stated on its website, “ImageMagick® is a free, open-source software suite, used for editing and manipulating digital images. It can be used to create, edit, compose, or convert bitmap images, and supports a wide range of file formats, including JPEG, PNG, GIF, TIFF, and PDF.”&lt;/p&gt;
 
 &lt;p&gt;For those running a Debian-based distribution (another reason I love Linux)&lt;/p&gt;
@@ -28,7 +30,8 @@
 
 &lt;p&gt;is all that is needed to install &lt;a href=&quot;https://imagemagick.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageMagick&lt;/code&gt;&lt;/a&gt; (and most other programs). The program &lt;a href=&quot;https://imagemagick.org/script/convert.php&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert&lt;/code&gt;&lt;/a&gt; is a member of &lt;a href=&quot;https://imagemagick.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageMagick&lt;/code&gt;&lt;/a&gt; suite and, it is the program used to convert images from one file extension to another. Let us consider a folder containing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt; images.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── 1.png
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── 1.png
 ├── 2.png
 ├── 3.png
 ├── 4.png
@@ -62,6 +65,50 @@
 
 &lt;p&gt;In this context, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; command function as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;and&lt;/code&gt;, meaning that it runs the first command &lt;strong&gt;and&lt;/strong&gt; them the second one.&lt;/p&gt;
 
+&lt;p&gt;The text you provided is well-written and generally free of major grammar errors. However, there are a few minor improvements that could be made for clarity and consistency:&lt;/p&gt;
+
+&lt;h3 id=&quot;join-pdf-files&quot;&gt;Join PDF Files&lt;/h3&gt;
+
+&lt;p&gt;It is not rare to need to join a bunch of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pdf&lt;/code&gt; files into a single file. Recently, I was asked to upload PDF files containing all required documents as a single document. Like many tasks, there are several ways to accomplish this. For instance, you can use websites such as &lt;a href=&quot;https://www.ilovepdf.com/merge_pdf&quot;&gt;iLovePDF&lt;/a&gt;, &lt;a href=&quot;https://www.adobe.com/acrobat/online/merge-pdf.html&quot;&gt;Adobe&lt;/a&gt;, or &lt;a href=&quot;https://www.foxit.com/merge-pdf/&quot;&gt;Foxit&lt;/a&gt;. Alternatively, you can use software applications, some of which may be paid and come with unnecessary features. One drawback of using web-based services is privacy concerns: you may not know where these files will be uploaded. Another issue, although not a problem for everyone, is the requirement to manually select files for uploading to the website or software. An easy solution is to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdfunite&lt;/code&gt; from the &lt;a href=&quot;https://poppler.freedesktop.org/&quot;&gt;Poppler&lt;/a&gt; toolkit.&lt;/p&gt;
+
+&lt;p&gt;On a Debian-based system, you can install &lt;a href=&quot;https://poppler.freedesktop.org/&quot;&gt;Poppler&lt;/a&gt; as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;poppler-utils
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s consider the following folder containing the files to be combined, sorted in numerical order for the desired output merged file:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── 1.pdf
+├── 2.pdf
+├── 3.pdf
+├── 4.pdf
+├── 5.pdf
+├── 6.pdf
+├── 7.pdf
+├── 8.pdf
+└── 9.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Similar to the commands shown earlier:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdfunite &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.pdf output.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With this command, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdfunite&lt;/code&gt; combines all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.pdf&lt;/code&gt; files and saves them as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.pdf&lt;/code&gt; (you can choose any filename other than “output”). After entering &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ls -1&lt;/code&gt; in the current folder, you will see:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── 1.pdf
+├── 2.pdf
+├── 3.pdf
+├── 4.pdf
+├── 5.pdf
+├── 6.pdf
+├── 7.pdf
+├── 8.pdf
+├── 9.pdf
+└── output.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
