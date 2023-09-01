@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-08-28T14:11:34-03:00</updated>
+ <updated>2023-09-01T08:57:52-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -964,6 +964,18 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
         &lt;a href=&quot;https://open.spotify.com/album/7k1YOwYf369EX0aHeXApWp?si=9207122e355540a7&quot;&gt;Core&lt;/a&gt;
         &lt;p&gt;Stone Temple Pilots&lt;/p&gt;
         &lt;p class=&quot;album-year&quot;&gt;1992&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;album-img&quot;&gt;
+        &lt;a href=&quot;https://open.spotify.com/album/1H9g6j4Wwj6wh6p8YHVtkf?si=MFyl4HsAT0mJVvqg45hUbg&quot;&gt;
+            &lt;img src=&quot;https://i.scdn.co/image/ab67616d00001e022043dd3544a339547d04b436&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://open.spotify.com/album/1H9g6j4Wwj6wh6p8YHVtkf?si=MFyl4HsAT0mJVvqg45hUbg&quot;&gt;Outlandos D&apos;Amour&lt;/a&gt;
+        &lt;p&gt;The Police&lt;/p&gt;
+        &lt;p class=&quot;album-year&quot;&gt;1978&lt;/p&gt;
     &lt;/div&gt;
 
     
