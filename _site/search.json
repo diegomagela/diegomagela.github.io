@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "My actual Linux setup with Debian 12",
+      "description" : "",
+      "url"      : "/2023/09/01/debian12",
+      "category" : "writing",
+      "tags"     : "bash, linux, debian",
+      "date"     : "2023-09-01 00:00:00 -0300"
+
+    } ,
+  
+    {
+
       "title"    : "Useful linux command-line programs",
       "description" : "",
       "url"      : "/2023/08/21/useful-linux-command",

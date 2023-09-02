@@ -4,13 +4,631 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-01T08:57:52-03:00</updated>
+ <updated>2023-09-02T14:12:15-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>My actual Linux setup with Debian 12</title>
+   <link href="http://localhost:4000/2023/09/01/debian12"/>
+   <updated>2023-09-01T00:00:00-03:00</updated>
+   <id>http://localhost:4000/2023/09/01/debian12</id>
+   <content type="html">&lt;p&gt;I have been a Linux user for almost 7 years. I was introduced to it by my undergraduate advisor, &lt;a href=&quot;https://unesp.br/portaldocentes/docentes/394574?lang=en&quot;&gt;Daniel S. Souza&lt;/a&gt;, who suggested it to me after I encounter some problems while compiling Fortran codes in Windows. At that time, my knowledge of it was close to nonexistent. Everything I knew about it was related to its ‘difficulty’ of use. Quotation marks is just to highlighted this misconception.&lt;/p&gt;
+
+&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
+
+&lt;p&gt;The distribution I used most during this time was &lt;a href=&quot;https://elementary.io/&quot;&gt;Elementary OS&lt;/a&gt;, although I initially started with &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;. In fact, it was through &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; that I learned about all the flexibility and ease of using the Linux operating system. The first thing that impressed me was how easy it is to install a compiler, in this case, &lt;a href=&quot;https://gcc.gnu.org/wiki/GFortran&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gfortran&lt;/code&gt;&lt;/a&gt;. A simple command like&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;gfortran
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;was all it took to install a Fortran compiler and run code.&lt;/p&gt;
+
+&lt;p&gt;As I was discovering a new world, I decided to test various Linux distributions, including &lt;a href=&quot;https://linuxmint.com/&quot;&gt;Linux Mint&lt;/a&gt;, &lt;a href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;, &lt;a href=&quot;https://elementary.io/&quot;&gt;Elementary OS&lt;/a&gt;, and, of course, &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt;. When I first installed &lt;a href=&quot;https://www.debian.org/&quot;&gt;Debian&lt;/a&gt; around 2017, it did not have easy support for non-free firmware as it does nowadays, particularly with Debian 12 &lt;a href=&quot;https://www.debian.org/News/2023/20230610&quot;&gt;(Bookworm)&lt;/a&gt;. So, I preferred to stick with a ready-to-go distribution because, in the end, what really matters is the work done. After some &lt;a href=&quot;https://www.zdnet.com/article/linux-distro-hopping-is-a-fun-way-to-find-the-perfect-desktop-operating-system/&quot;&gt;distro hopping&lt;/a&gt;, I ended up with &lt;a href=&quot;https://elementary.io/&quot;&gt;Elementary OS&lt;/a&gt;: it’s easy to install, aesthetically pleasing (what appealed to me most), based on &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;, and not so difficult to use.&lt;/p&gt;
+
+&lt;p&gt;It being based on &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; has the advantage of having all &lt;a href=&quot;https://ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; packages out-of-box, but this dependency also has a disadvantage (IMHO): take a while to be updated. Of course, for non-system-related applications, that is not a problem with &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; alongside with &lt;a href=&quot;https://flathub.org/en&quot;&gt;Flathub&lt;/a&gt;. For my use, the most important is stability: I do not want lost time fixing updates that broke the system. I prioritize updated (and stable) kernel, as well as compilers. In the end, it is what matters for me.&lt;/p&gt;
+
+&lt;p&gt;Debian 12 has everything: stability, updated kernel and compilers, easy installation, and support of non-free-firmware. It has only one defect: not having Pantheon desktop environment. Anyway, &lt;a href=&quot;https://release.gnome.org/43/&quot;&gt;GNOME 43&lt;/a&gt; shipped with Debian is sufficient. Below, I will share the post-installation process I have automated using a bash script.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-the-new-system&quot;&gt;Setting up the new system&lt;/h3&gt;
+
+&lt;p&gt;Firstly, as I installed Debian 12 using &lt;a href=&quot;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netinst.iso&lt;/code&gt;&lt;/a&gt;, it is required add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$USER&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudoers&lt;/code&gt; in order to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt;. To perform this, run the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;su &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;
+echo &quot;
+# Adding $USER to sudoers
+$USER ALL=(ALL:ALL) ALL
+&quot; | tee -a /etc/sudoers &amp;gt; /dev/null&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In short, the previous command append the current &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$USER&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudoers&lt;/code&gt; file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/sudoers&lt;/code&gt; directory. Now, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$USER&lt;/code&gt; is able to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt;, necessary to install any package (or any command that request &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt; privileges). Although the &lt;a href=&quot;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netinst.iso&lt;/code&gt;&lt;/a&gt; downloads almost all packages during the installation, it can be a good move update the system:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt autoremove &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we are ready to download all important packages to have the work done.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bash-completion vim wget curl htop btop git &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     build-essential gfortran cmake gdb gnome-console geary docker.io &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     gnuplot ruby-dev timeshift inkscape gimp &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following list presents a brief explanation of each package:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash-completion&lt;/code&gt;: assists in creating new completions for bash shell&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim&lt;/code&gt;: a powerful yet lightweight terminal-based text editor&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt;: a command-line tool for retrieving files from the internet&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl&lt;/code&gt;: A tool with similar functionality to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;htop&lt;/code&gt;: a useful terminal-based system monitoring&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;btop&lt;/code&gt;: an enhanced &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;htop&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;: a version control system&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build-essential&lt;/code&gt;: provides tools for compiling software&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gfortran&lt;/code&gt;: a Fortran compiler&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cmake&lt;/code&gt;: used for building automation&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gdb&lt;/code&gt;: the GNU debugger&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnome-console&lt;/code&gt;: GNOME terminal&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;geary&lt;/code&gt;: a clean and easy to use e-mail client&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker.io&lt;/code&gt;: used for containerization&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnuplot&lt;/code&gt;: a powerful command-line plotting software&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby-dev&lt;/code&gt;: provides header files for compiling Ruby (this website is an example)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeshift&lt;/code&gt;: used for filesystem snapshots for backup purposes&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inkscape&lt;/code&gt;: a versatile vector graphics software&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gimp&lt;/code&gt;: an image editor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As we are downloading a new terminal and e-mail client, we are going to remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gnome-terminal&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;evolution&lt;/code&gt;, shipped with GNOME&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt remove gnome-terminal evolution &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt autoremove &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;For those using a laptop with fingerprint reader, GNOME offers the option to login and substitute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo&lt;/code&gt; password with fingerprint. To this, simply install the following packages:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fprintd libpam-fprintd &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As I mentioned above, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatpak&lt;/code&gt; allows one to install updated applications that are not in the system repository while sandboxing them.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;flatpak gnome-software-plugin-flatpak
+flatpak remote-add &lt;span class=&quot;nt&quot;&gt;--if-not-exists&lt;/span&gt; flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The above command install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatpak&lt;/code&gt; and a plugin to integrate the applications in GNOME software. Although I rarely use the software store, it can be helpful. The last command adds &lt;a href=&quot;https://flathub.org/en&quot;&gt;Flathub&lt;/a&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flapak&lt;/code&gt; repositories, the biggest &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flapak&lt;/code&gt; repository.&lt;/p&gt;
+
+&lt;p&gt;My computing stack is based on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C/C++&lt;/code&gt; codes alongside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt; scripts. Thus, we need some packages for it.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libeigen3-dev libsuitesparse-dev libopenblas-dev &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;libeigen3-dev&lt;/code&gt; installs the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C++&lt;/code&gt; headers files of the &lt;a href=&quot;https://eigen.tuxfamily.org/index.php?title=Main_Page&quot;&gt;Eigen&lt;/a&gt; library, a template-based &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_algebra&quot;&gt;linear algebra&lt;/a&gt; library. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;libsuitesparse-dev&lt;/code&gt; provides a set of packages for sparse-matrix-related computing, developed by &lt;a href=&quot;https://people.engr.tamu.edu/davis/welcome.html&quot;&gt;Tim Davis&lt;/a&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;libopenblas-dev&lt;/code&gt; offers an optimized implementation of the &lt;a href=&quot;https://www.netlib.org/blas/&quot;&gt;BLAS&lt;/a&gt; library. In summary, these packages are used for linear algebra-related computing in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C++&lt;/code&gt;. In addition to these packages, there is also &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;petsc-dev&lt;/code&gt;, which is a toolkit for parallel computing. However, I prefer compiling &lt;a href=&quot;https://petsc.org/&quot;&gt;PETSc&lt;/a&gt; from source, as I have not had a good experience using the repository package&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;petsc_dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop&quot;&lt;/span&gt;
+git clone &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; release https://gitlab.com/petsc/petsc.git &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;petsc_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/petsc
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;petsc_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/petsc
+git pull
+./configure &lt;span class=&quot;nt&quot;&gt;--with-cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gcc &lt;span class=&quot;nt&quot;&gt;--with-cxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;g++ &lt;span class=&quot;nt&quot;&gt;--with-fc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gfortran &lt;span class=&quot;nt&quot;&gt;--download-mpich&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;--download-fblaslapack&lt;/span&gt;
+make all check
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;First, we define the installation directory &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;petsc_dir=&quot;$HOME/Desktop&quot;&lt;/code&gt;. I prefer to install libraries in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Desktop&lt;/code&gt; folder, but you can choose any directory, although it is recommend to install it in a directory inside your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$HOME&lt;/code&gt; directory. The following commands clone &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;petsc&lt;/code&gt; from GitLab, navigate to the created directory, update the repository with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull&lt;/code&gt;, and finally, configure and build the application. After finishing the installation, you need to set the variable in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; so that the system recognizes the library. To do this, simply add the following to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PETSC_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Desktop/petsc
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PETSC_ARCH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;arch-linux-c-debug
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PETSC_DIR&lt;/span&gt;/lib/petsc/bin/:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A bash script can easily perform this task for you&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+### &amp;gt;&amp;gt;&amp;gt; PETSc &amp;gt;&amp;gt;&amp;gt;
+export PETSC_DIR=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop/petsc
+export PETSC_ARCH=arch-linux-c-debug
+export PATH=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PETSC_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/lib/petsc/bin/:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PATH
+### &amp;lt;&amp;lt;&amp;lt; PETSc &amp;lt;&amp;lt;&amp;lt;
+&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bashrc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, source &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; file to use &lt;a href=&quot;https://petsc.org/&quot;&gt;PETSc&lt;/a&gt; bin commands&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s install some &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; packages now. For system-wide usage, I prefer to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; packages from the repository. My current Python usage revolves around numerical packages: &lt;a href=&quot;https://numpy.org/&quot;&gt;NumPy&lt;/a&gt; for linear algebra, &lt;a href=&quot;https://scipy.org/&quot;&gt;SciPy&lt;/a&gt;, for algorithms related to scientific computing, &lt;a href=&quot;https://www.sympy.org/en/index.html&quot;&gt;SymPy&lt;/a&gt; for symbolic computing ,and &lt;a href=&quot;https://matplotlib.org/&quot;&gt;Matplotlib&lt;/a&gt; for graphics plotting.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ipython3 python3-numpy python3-scipy python3-sympy &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+                 python3-matplotlib &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the list, there is also &lt;a href=&quot;https://ipython.org/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ipython&lt;/code&gt;&lt;/a&gt;, which is an interactive shell application to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; code.&lt;/p&gt;
+
+&lt;p&gt;These packages are not the most updated ones, as Debian freezes the packages versions when releasing a new Debian version. Although &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; is available in the repository, Debian do recommend to install externally-managed python packages, i.e., packages not managed by Debian maintainers, by using a virtual environment. This can be accomplished as&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop/python&quot;&lt;/span&gt;
+python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; venv &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we can install the latest &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; packages in this virtual environment (venv). To save your time, create a file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt; write down all packages you want to have. In my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt; file, I have&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;numpy
+scipy
+simpy
+matplotlib
+gmsh
+ipython
+ipykernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Basically, it is the same packages that were installed system-wide, with the exception of &lt;a href=&quot;https://gmsh.info/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gmsh&lt;/code&gt;&lt;/a&gt;, an incredible mesh generator that I use to generate finite element method (FEM) meshes. Then, run the following command&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/bin/pip3.11 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To automate this process, the following &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt; script perform all of this at once&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop/python&quot;&lt;/span&gt;
+python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; venv &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;nb&quot;&gt;touch &lt;/span&gt;requirements.txt
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;numpy
+scipy
+simpy
+matplotlib
+gmsh
+ipython
+ipykernel&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; requirements.txt
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/bin/pip3.11 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To easily activate this venv, let’s create an alias for it: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pyenv&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;touch&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bash_aliases
+&lt;span class=&quot;nb&quot;&gt;echo alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pyenv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;source &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/bin/activate&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     | &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bash_aliases &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;source &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.bashrc&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, to activate (and use) this venv, simply type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pyenv&lt;/code&gt; in any terminal.&lt;/p&gt;
+
+&lt;p&gt;To use all these programming-related packages that were installed, you will need a text editor. For me, &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;Visual Studio Code&lt;/a&gt; is the best one. It has a lot of extensions that really help when one is coding. One can download a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.deb&lt;/code&gt; package directly from its website and install it using&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;code_version.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As the goal here is to use bash script to facilitate the post-installation process, the following bash script installs VS Code and also installs the extensions that I use daily&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;software-properties-common apt-transport-https gnupg &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+wget &lt;span class=&quot;nt&quot;&gt;-O-&lt;/span&gt; https://packages.microsoft.com/keys/microsoft.asc &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+         | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;gpg &lt;span class=&quot;nt&quot;&gt;--dearmor&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /usr/share/keyrings/vscode.gpg
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;deb &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;amd64 signed-by&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+         | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /etc/apt/sources.list.d/vscode.list
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;code &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-python.python
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-toolsai.jupyter
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-vscode.cpptools
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-vscode.cmake-tools
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; james-yu.latex-workshop
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; streetsidesoftware.code-spell-checker
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; streetsidesoftware.code-spell-checker-portuguese-brazilian
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The extension names are self-explanatory, so you can easily understand their purposes. To see more extensions, visit its &lt;a href=&quot;https://marketplace.visualstudio.com/vscode&quot;&gt;marketplace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To use LaTeX, I highly recommend installing the full version of TeX Live available in the repository&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;texlive-full &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you have a poor internet connection, it might be better to download a full &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.iso&lt;/code&gt; file and install it locally. You can find more instructions on the &lt;a href=&quot;https://tug.org/texlive/acquire-iso.html&quot;&gt;TeX Live website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For those interested in computational fluid dynamics (CFD), installing OpenFOAM is straightforward&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl https://dl.openfoam.com/add-debian-repo.sh | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openfoam-default &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;paraview &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;customizations&quot;&gt;Customizations&lt;/h3&gt;
+
+&lt;p&gt;In addition to system-related configurations, I also make a few customizations to my setup: removing the background (I prefer a plain black one), removing the grub wallpaper, and removing the grub splash image (I like to see the components being loaded while booting the system). As usual, a bash script performs all of these tasks at once:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;set color_normal=light-gray/black
+set menu_color_normal=white/black
+set menu_color_highlight=black/light-gray&quot;&apos;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+| &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /boot/grub/custom.cfg &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;
+# Remove grub wallpaper
+GRUB_BACKGROUND=&quot;&quot;
+
+# Remove grub splash image
+GRUB_CMDLINE_LINUX_DEFAULT=&quot;&quot;
+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/default/grub &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-grub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;final-configurations&quot;&gt;Final configurations&lt;/h3&gt;
+
+&lt;p&gt;After all setup up, let us take a screenshot of the system for fast and easy restore the system at this point. This is performed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeshift&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;timeshift &lt;span class=&quot;nt&quot;&gt;--create&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--comments&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initial setup&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, the system is ready to use and secure in case you make a mistake. Although it is not mandatory to reboot the system, it is recommended so that all modifications take effect.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;plain-bash-script&quot;&gt;Plain &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt; script&lt;/h3&gt;
+
+&lt;p&gt;Below is a plain bash script that automates all the steps explained earlier, making it easy to set up a new machine quickly. To download the script, simply click &lt;a href=&quot;/assets/bash/debian12_post_installation.sh&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +%s&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+===============================================================================
+                          DEBIAN 12 POST INSTALLATION
+
+DIEGO MAGELA LEMOS
+diegomagela@usp.br
+===============================================================================
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Firstly, one should add the $USER to sudoers&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Adding &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; to sudoers...
+Enter root password
+
+&quot;&lt;/span&gt;
+
+su &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;
+echo &quot;
+# Adding $USER to sudoers
+$USER ALL=(ALL:ALL) ALL
+&quot; | tee -a /etc/sudoers &amp;gt; /dev/null&apos;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# Update the system&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Updating the system...
+
+&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt autoremove &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install some packages&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing packages...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bash-completion vim wget curl btop htop git &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     build-essential gfortran cmake gdb gnome-console geary docker.io &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     gnuplot ruby-dev timeshift inkscape gimp &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt remove gnome-terminal &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt autoremove &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Enable fingerprint login (Gnome)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;fprintd libpam-fprintd &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install flatpak&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing flatpak...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;flatpak gnome-software-plugin-flatpak
+flatpak remote-add &lt;span class=&quot;nt&quot;&gt;--if-not-exists&lt;/span&gt; flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+&lt;span class=&quot;c&quot;&gt;# Customizing grub &lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Customizing grub...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Remove grub wallpaper&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;
+# Remove grub wallpaper
+GRUB_BACKGROUND=&quot;&quot;
+
+# Remove grub splash image
+GRUB_CMDLINE_LINUX_DEFAULT=&quot;&quot;
+&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/default/grub &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+
+&lt;span class=&quot;c&quot;&gt;# Change grub colors&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;set color_normal=light-gray/black
+set menu_color_normal=white/black
+set menu_color_highlight=black/light-gray&quot;&apos;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+| &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /boot/grub/custom.cfg &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+
+&lt;span class=&quot;c&quot;&gt;# Update grub&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-grub
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Remove desktop wallpaper&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Removing background...
+
+&quot;&lt;/span&gt;
+
+gsettings &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;org.gnome.desktop.background picture-uri &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+gsettings &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;org.gnome.desktop.background picture-uri-dark &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+gsettings &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;org.gnome.desktop.background primary-color black
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install C/C++ packages&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing C/C++ packages...
+
+&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libeigen3-dev libsuitesparse-dev libopenblas-dev &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install python packages&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing Python packages...
+
+&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ipython3 pipx python3-numpy python3-scipy python3-sympy &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+                 python3-matplotlib &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Create python environment&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Creating Python environment...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop/python&quot;&lt;/span&gt;
+python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; venv &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;nb&quot;&gt;touch &lt;/span&gt;requirements.txt
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;numpy
+scipy
+simpy
+matplotlib
+gmsh
+ipython
+ipykernel&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; requirements.txt
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/bin/pip3.11 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; requirements.txt
+&lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;requirements.txt
+
+&lt;span class=&quot;nb&quot;&gt;touch&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bash_aliases
+&lt;span class=&quot;nb&quot;&gt;echo alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pyenv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;source &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;python_env_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/bin/activate&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     | &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bash_aliases &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;source &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.bashrc&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install VSCode&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing Visual Studio Code...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;software-properties-common apt-transport-https gnupg &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+wget &lt;span class=&quot;nt&quot;&gt;-O-&lt;/span&gt; https://packages.microsoft.com/keys/microsoft.asc &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+         | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;gpg &lt;span class=&quot;nt&quot;&gt;--dearmor&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /usr/share/keyrings/vscode.gpg
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;deb &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;amd64 signed-by&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+         | &lt;span class=&quot;nb&quot;&gt;sudo tee&lt;/span&gt; /etc/apt/sources.list.d/vscode.list
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;code &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-python.python
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-toolsai.jupyter
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-vscode.cpptools
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; ms-vscode.cmake-tools
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; james-yu.latex-workshop
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; streetsidesoftware.code-spell-checker
+code &lt;span class=&quot;nt&quot;&gt;--install-extension&lt;/span&gt; streetsidesoftware.code-spell-checker-portuguese-brazilian
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install PETSc&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing PETSc...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;petsc_dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop&quot;&lt;/span&gt;
+git clone &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; release https://gitlab.com/petsc/petsc.git &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;petsc_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/petsc
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;petsc_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/petsc
+git pull
+./configure &lt;span class=&quot;nt&quot;&gt;--with-cc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gcc &lt;span class=&quot;nt&quot;&gt;--with-cxx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;g++ &lt;span class=&quot;nt&quot;&gt;--with-fc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gfortran &lt;span class=&quot;nt&quot;&gt;--download-mpich&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;--download-fblaslapack&lt;/span&gt;
+make all check
+&lt;span class=&quot;nb&quot;&gt;cd
+
+echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+### &amp;gt;&amp;gt;&amp;gt; PETSc &amp;gt;&amp;gt;&amp;gt;
+export PETSC_DIR=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop/petsc
+export PETSC_ARCH=arch-linux-c-debug
+export PATH=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PETSC_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/lib/petsc/bin/:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PATH
+### &amp;lt;&amp;lt;&amp;lt; PETSc &amp;lt;&amp;lt;&amp;lt;
+&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bashrc &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;source &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.bashrc&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install OpenFOAM (openfoam.com) using docker&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing OpenFOAM [openfoam.com] using docker...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;openfoam_dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/Desktop/OpenFOAM&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;openfoam_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;openfoam_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+wget https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker
+&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x openfoam-docker
+&lt;span class=&quot;nb&quot;&gt;ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sf&lt;/span&gt; openfoam-docker openfoam-default
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;docker pull opencfd/openfoam-default
+
+&lt;span class=&quot;nb&quot;&gt;echo alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;openfoam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sudo bash &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;openfoam_dir&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/openfoam-default&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+     | &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/.bash_aliases &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;source &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.bashrc&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Add the repository&lt;/span&gt;
+curl https://dl.openfoam.com/add-debian-repo.sh | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Update the repository information&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+
+&lt;span class=&quot;c&quot;&gt;# Install preferred package. Eg,&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openfoam-default &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;paraview &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install Texlive&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Installing Texlive...
+
+&quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ./install_tex_live path_to_iso&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;texlive-full &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Updating the system...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt autoremove &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Creating a snapshot (backup) of the system...
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;timeshift &lt;span class=&quot;nt&quot;&gt;--create&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--comments&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initial setup&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Completed!
+
+&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+==========================
+          FINISH
+==========================
+
+&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +%s&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;Execution &lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;was &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;expr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$end&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$start&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; seconds | &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;/Documents/log.txt
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;
+
+Rebooting the system...
+
+&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sleep &lt;/span&gt;5
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Useful linux command-line programs</title>
