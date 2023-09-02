@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-02T14:12:15-03:00</updated>
+ <updated>2023-09-02T15:25:52-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -2792,6 +2792,18 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
     &lt;div&gt;
         &lt;a href=&quot;https://www.imdb.com/title/tt0787524/&quot;&gt;The Man Who Knew Infinity&lt;/a&gt;
         &lt;p&gt;Matt Brown&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;2015&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1895587/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_spotl&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BMjIyOTM5OTIzNV5BMl5BanBnXkFtZTgwMDkzODE2NjE@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt1895587/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_spotl&quot;&gt;Spotlight&lt;/a&gt;
+        &lt;p&gt;Tom McCarthy&lt;/p&gt;
         &lt;p class=&quot;movie-year&quot;&gt;2015&lt;/p&gt;
     &lt;/div&gt;
 
