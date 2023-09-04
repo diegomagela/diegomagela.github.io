@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-02T15:44:30-03:00</updated>
+ <updated>2023-09-04T09:15:29-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -2805,6 +2805,18 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
         &lt;a href=&quot;https://www.imdb.com/title/tt1895587/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_spotl&quot;&gt;Spotlight&lt;/a&gt;
         &lt;p&gt;Tom McCarthy&lt;/p&gt;
         &lt;p class=&quot;movie-year&quot;&gt;2015&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;movie-img&quot;&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0122690/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_ronin&quot;&gt;
+            &lt;img src=&quot;https://m.media-amazon.com/images/M/MV5BOWVkYzliZGEtODIxMi00MDQwLThjMDAtNzI3M2NjYjg4NDE5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://www.imdb.com/title/tt0122690/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_ronin&quot;&gt;Ronin&lt;/a&gt;
+        &lt;p&gt;John Frankenheimer&lt;/p&gt;
+        &lt;p class=&quot;movie-year&quot;&gt;1998&lt;/p&gt;
     &lt;/div&gt;
 
     
