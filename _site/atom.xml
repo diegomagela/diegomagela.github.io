@@ -4,7 +4,7 @@
  <title>Diego Magela</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-05T16:05:49-03:00</updated>
+ <updated>2023-09-05T16:15:58-03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -1340,7 +1340,7 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
     &lt;/div&gt;
     &lt;div&gt;
         &lt;a href=&quot;https://open.spotify.com/album/7IKUTIc9UWuVngyGPtqNHS?si=b423b3b2958c4bb1&quot;&gt;L.A. Woman&lt;/a&gt;
-        &lt;p&gt;Jorge Ben Jor&lt;/p&gt;
+        &lt;p&gt;The Doors&lt;/p&gt;
         &lt;p class=&quot;album-year&quot;&gt;1971&lt;/p&gt;
     &lt;/div&gt;
 
@@ -1606,6 +1606,18 @@ on vinyl to my (dreamed) vinyl shelf. The list is not arranged in any specific o
         &lt;a href=&quot;https://open.spotify.com/album/2PKZhfPrgMmK5zug2pqdHA?si=XPcoXGu4Tx6WMb__moXM9A&quot;&gt;Keep It like a Secret&lt;/a&gt;
         &lt;p&gt;Built To Spill&lt;/p&gt;
         &lt;p class=&quot;album-year&quot;&gt;1999&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+    &lt;div class=&quot;album-img&quot;&gt;
+        &lt;a href=&quot;https://open.spotify.com/album/1jWmEhn3ggaL6isoyLfwBn?si=JSX_l4XCQfaZqn0LgYrdDA&quot;&gt;
+            &lt;img src=&quot;https://i.scdn.co/image/ab67616d0000b2735b96a8c5d61be8878452f8f1&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;https://open.spotify.com/album/1jWmEhn3ggaL6isoyLfwBn?si=JSX_l4XCQfaZqn0LgYrdDA&quot;&gt;The Doors&lt;/a&gt;
+        &lt;p&gt;The Doors&lt;/p&gt;
+        &lt;p class=&quot;album-year&quot;&gt;1967&lt;/p&gt;
     &lt;/div&gt;
 
     

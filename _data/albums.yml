@@ -295,7 +295,7 @@
 
 - title: L.A. Woman
   year:  1971
-  artist: Jorge Ben Jor
+  artist: The Doors
   img: https://i.scdn.co/image/ab67616d0000b27320783882533e669760741df2
   url: https://open.spotify.com/album/7IKUTIc9UWuVngyGPtqNHS?si=b423b3b2958c4bb1
 
@@ -430,3 +430,9 @@
   artist: Built To Spill
   img: https://i.scdn.co/image/ab67616d0000b273c8603de6a76c77b5330ec96d
   url: https://open.spotify.com/album/2PKZhfPrgMmK5zug2pqdHA?si=XPcoXGu4Tx6WMb__moXM9A
+
+- title: The Doors
+  year:  1967
+  artist: The Doors
+  img: https://i.scdn.co/image/ab67616d0000b2735b96a8c5d61be8878452f8f1
+  url: https://open.spotify.com/album/1jWmEhn3ggaL6isoyLfwBn?si=JSX_l4XCQfaZqn0LgYrdDA
