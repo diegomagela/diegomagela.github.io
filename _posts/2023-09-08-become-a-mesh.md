@@ -89,6 +89,6 @@ gmsh pictureToMesh.geo
 ```
 After running the command, you will see the Gmsh GUI as below (not in dark mode, if it is have not previously changed):
 
-![Mesh from picture](/assets/img/gmshGui.png "My mesh")
+![Mesh from picture](/assets/img/gmshGui.png "Gmsh GUI")
 
 Firstly, press `Alt + P` and `Alt + L` to hide geometry's points and curves. In the left side bar menu, you can select the meshing options `Algorithm`, `Element size factor`, and `Minimum element size`. Choose these parameters according to your preference (or left them as default values) and press `Run` on the bottom to generate the mesh. To outline the mesh elements, press `Alt + E`. To save, press `Save PNG`. A file named `outputFile.png` will be saved same in the same directory.
