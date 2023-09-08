@@ -5,10 +5,9 @@ If(PostProcessing.NbViews == 0)
   // characteristic lengths for the mesh
 
   // Input image
-  Merge "pic_to_mesh.png";
+  Merge "inputFile.png";
 
   // Mesh variation
-  //Plugin(ModifyComponents).Expression0 = "v0 * 10";
   Plugin(ModifyComponents).Expression0 = "1 + v0^2 * 10";
   Plugin(ModifyComponents).Run;
 
@@ -46,7 +45,7 @@ DefineConstant[
     GmshOption "Mesh.CharacteristicLengthMin", Min w/100, Max w, Step 0.1,
     Name "Meshing parameters/Minimum element size"},
 
-  save = {StrCat("View.ShowScale=0;Print '", CurrentDirectory, "out.png';"),
+  save = {StrCat("View.ShowScale=0;Print '", CurrentDirectory, "outputFile.png';"),
     AutoCheck 0, Macro "GmshParseString",
     Name "Save PNG"}
 ];
@@ -55,4 +54,4 @@ Mesh.ColorCarousel = 0;
 Mesh.Color.Triangles = Black;
 Mesh.Color.Quadrangles = Black;
 Mesh.RecombineAll = (algo == 8);
-Solver.AutoMesh = 2; // always remesh
+Solver.AutoMesh = 2;
