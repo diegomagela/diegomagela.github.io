@@ -7,7 +7,7 @@ comments: true
 tags: [gmsh, python]
 categories: blog
 toc: true
-last-update: 2023-09-08
+last-update: 2023-09-09
 ---
 
 Besides all its power to generate high quality mesh, [Gmsh](gmsh.info/) also can be used to generate high quality mesh of yours!
