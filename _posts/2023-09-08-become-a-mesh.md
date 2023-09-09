@@ -92,3 +92,13 @@ After running the command, you will see the Gmsh GUI as below (not in dark mode,
 ![Mesh from picture](/assets/img/gmshGui.png "Gmsh GUI")
 
 Firstly, press `Alt + P` and `Alt + L` to hide geometry's points and curves. In the left side bar menu, you can select the meshing options `Algorithm`, `Element size factor`, and `Minimum element size`. Choose these parameters according to your preference (or left them as default values) and press `Run` on the bottom to generate the mesh. To outline the mesh elements, press `Alt + E`. To save, press `Save PNG`. A file named `outputFile.png` will be saved same in the same directory.
+
+![Mesh from picture](/assets/img/gmshGuiMesh.png "Your mesh")
+
+Besides the saved picture, a mesh file called `pictureToMesh.msh` will also be saved. This is the mesh file generated from your picture discretization based on pixel variations. You can open this file with gmsh as well
+
+```bash
+gmsh pictureToMesh.msh
+```
+
+![Mesh from picture](/assets/img/gmshGuiMeshMshFormat.png "Msh format")
