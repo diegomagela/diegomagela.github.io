@@ -10,11 +10,11 @@ toc: true
 last-update: 2023-09-09
 ---
 
-Besides all its power to generate high quality mesh, [Gmsh](gmsh.info/) also can be used to generate high quality mesh of yours!
+Besides all its power to generate high quality mesh, [Gmsh](https://gmsh.info/) also can be used to generate high quality mesh of yours!
 
 ![Mesh from picture](/assets/img/pictureMesh.svg "My mesh")
 
-To generate a *mesh* like this one, all you will need is `python` and [`gmsh`](gmsh.info/). In its [webpage](gmsh.info/) you will find all instructions to install it. The following `.geo` file is the script to perform all tasks in [`gmsh`](gmsh.info/). You can download this file [here](/assets/python/pictureToMesh.geo).
+To generate a *mesh* like this one, all you will need is `python` and [`gmsh`](https://gmsh.info/). In its [webpage](https://gmsh.info/) you will find all instructions to install it. The following `.geo` file is the script to perform all tasks in [`gmsh`](https://gmsh.info/). You can download this file [here](/assets/python/pictureToMesh.geo).
 
 ```c++
 // pictureToMesh.geo
