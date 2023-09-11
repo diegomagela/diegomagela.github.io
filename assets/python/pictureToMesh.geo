@@ -8,7 +8,7 @@ If(PostProcessing.NbViews == 0)
   Merge "inputFile.png";
 
   // Mesh variation
-  Plugin(ModifyComponents).Expression0 = "1 + v0^2 * 10";
+  Plugin(ModifyComponents).Expression0 = "1 + v0^3 * 10";
   Plugin(ModifyComponents).Run;
 
 EndIf
@@ -29,8 +29,6 @@ Line(3) = {3,4};
 Line(4) = {4,1};
 Line Loop(5) = {3,4,1,2};
 Plane Surface(6) = {5};
-
-outfile = StrCat(CurrentDirectory, "pic_to_mesh_out.png");
 
 DefineConstant[
   algo = {Mesh.Algorithm, AutoCheck 0, GmshOption "Mesh.Algorithm",
