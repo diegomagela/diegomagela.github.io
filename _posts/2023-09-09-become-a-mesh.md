@@ -7,43 +7,41 @@ comments: true
 tags: [gmsh, python]
 categories: blog
 toc: true
-last-update: 2023-09-09
+last-update: 2023-09-13
 ---
 
 Besides all its power to generate high quality mesh, [Gmsh](https://gmsh.info/) also can be used to generate high quality mesh of yours!
 
 ![Mesh from picture](/assets/img/pictureMesh.svg "My mesh")
 
-To generate a *mesh* like this one, all you will need is `python` and [`gmsh`](https://gmsh.info/). In its [webpage](https://gmsh.info/) you will find all instructions to install it. The following `.geo` file is the script to perform all tasks in [`gmsh`](https://gmsh.info/). You can download this file [here](/assets/python/pictureToMesh.geo).
+To generate a mesh like this one, all you will need is `python` and [`gmsh`](https://gmsh.info/). In its [webpage](https://gmsh.info/) you will find all instructions to install it. The following `.py` file is the script to perform all tasks in [`gmsh`](https://gmsh.info/). You can download this file [here](/assets/python/pic2msh.py).
 
-```c++
-// pictureToMesh.geo
+```python
+# pic2msh.py
 
-/* ====================================
-   Credits to Prof. Christophe Geuzaine
-   ==================================== */
+#  ====================================
+#  Credits to Prof. Christophe Geuzaine
+#  ==================================== 
 
-If(PostProcessing.NbViews == 0)
+import sys
+import subprocess
 
-  // Merge the image (this will create a new post-processing view, View[0]), and
-  // modify the normalized pixel values (v0) to make them reasonnable
-  // characteristic lengths for the mesh
+# Picture to be meshed
+filename = str(sys.argv[1])
+filename = f'"{filename}"'
 
-  // Input image
-  Merge "inputFile.png";
+# Write GEO file as input for Gmsh
+header = f'If(PostProcessing.NbViews == 0) \n \
+\t Merge {filename}; \n\
+\t Plugin(ModifyComponents).Expression0 = "1 + v0^3 * 10"; \n\
+\t Plugin(ModifyComponents).Run; \n\
+EndIf\n'
 
-  // Mesh variation
-  Plugin(ModifyComponents).Expression0 = "1 + v0^2 * 10";
-  Plugin(ModifyComponents).Run;
-
-EndIf
-
-// Apply the view as the current background mesh
+body = """
 Background Mesh View[0];
-
-// Build a simple geometry on top of the background mesh
 w = View[0].MaxX;
 h = View[0].MaxY;
+
 Point(1)={0,0,0,w};
 Point(2)={w,0,0,w};
 Point(3)={w,h,0,w};
@@ -55,11 +53,11 @@ Line(4) = {4,1};
 Line Loop(5) = {3,4,1,2};
 Plane Surface(6) = {5};
 
-outfile = StrCat(CurrentDirectory, "pic_to_mesh_out.png");
-
 DefineConstant[
   algo = {Mesh.Algorithm, AutoCheck 0, GmshOption "Mesh.Algorithm",
-    Choices{1="MeshAdapt", 5="Delaunay", 6="Frontal", 8="DelQuad"},
+    Choices{1="MeshAdapt", 2="Automatic", 5="Delaunay", 6="Frontal-Delaunay", 
+    7="BAMG", 8="Frontal-Delaunay for Quads", 9="Packing of Parallelograms",
+    11="Quasi-structured Quad"},
     Name "Meshing parameters/Algorithm"},
 
   sizeFact = {Mesh.CharacteristicLengthFactor, AutoCheck 0,
@@ -79,14 +77,30 @@ Mesh.ColorCarousel = 0;
 Mesh.Color.Triangles = Black;
 Mesh.Color.Quadrangles = Black;
 Mesh.RecombineAll = (algo == 8);
-Solver.AutoMesh = 2;
+Solver.AutoMesh = 2;"""
+
+geoFile = header + body
+
+def write_input():
+    f = open('input.geo', "w")
+    f.write(geoFile)
+    f.close()
+
+def run_mesh_gui():
+    subprocess.run(["gmsh", "input.geo"])
+    subprocess.run(["gmsh", "input.msh"])
+
+# Run
+write_input()
+run_mesh_gui()
 ```
 
-Place the picture you want to mesh in the same directory of `pictureToMesh.geo` and name it `inputFile.png`. Open a terminal and run the following command:
+To obtain an expected results, it is recommended to use a picture with a 'plain background'. To remove the background from any picture, I recommend [this](https://www.remove.bg/) website. In addition to removing the background, it is important to set a plain color background, preferably white. After tweaking the input picture, open a terminal and run the following command:
 
 ```bash
-gmsh pictureToMesh.geo
+python pic2mesh.py path_to_picture
 ```
+
 After running the command, you will see the Gmsh GUI as below (not in dark mode, if it is have not previously changed):
 
 ![Mesh from picture](/assets/img/gmshGui.png "Gmsh GUI")
@@ -95,10 +109,10 @@ Firstly, press `Alt + P` and `Alt + L` to hide geometry's points and curves. In 
 
 ![Mesh from picture](/assets/img/gmshGuiMesh.png "Your mesh")
 
-Besides the saved picture, a mesh file called `pictureToMesh.msh` will also be saved. This is the mesh file generated from your picture discretization based on pixel variations. You can open this file with gmsh as well
-
-```bash
-gmsh pictureToMesh.msh
-```
+Besides the saved picture, a mesh file named `pictureToMesh.msh` will also be saved. This mesh file is generated from your picture's discretization based on pixel variations. When you close the Gmsh GUI that is currently open, a new GUI will appear, displaying only the generated mesh:
 
 ![Mesh from picture](/assets/img/gmshGuiMeshMshFormat.png "Msh format")
+
+Now you can have a better visualization of the mesh. If it presents the expected result, you can export it in a vector graphics format, such as SVG or PDF. Using the top menu, go to `File > Export` and select you preferred file format. For tweaking the vector image, I do recommend using [Inkscape](https://inkscape.org/), for instance. From now on, your creativity is what matters most.
+
+Good meshing!

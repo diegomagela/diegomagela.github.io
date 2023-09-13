@@ -2,7 +2,7 @@
 layout: page
 ---
 
-Music, movies, and some random thoughts about life.
+Music, movies, some random codes and some thoughts about life.
 
 <div class="archive">
 
