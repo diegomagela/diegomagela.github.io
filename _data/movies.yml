@@ -22,6 +22,18 @@
   img: https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg
   url: https://www.imdb.com/title/tt0078788/?ref_=nv_sr_srsg_0_tt_6_nm_2_q_apo
 
+- title: A Clockwork Orange
+  year:  1971
+  director: Stanley Kubrick
+  img: https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_FMjpg_UX1000_.jpg
+  url: https://www.imdb.com/title/tt0066921/
+
+- title: American History X
+  year:  1998
+  director: Tony Kaye
+  img: https://m.media-amazon.com/images/M/MV5BZTJhN2FkYWEtMGI0My00YWM4LWI2MjAtM2UwNjY4MTI2ZTQyXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_.jpg
+  url: https://www.imdb.com/title/tt0120586/?ref_=nv_sr_srsg_1_tt_7_nm_0_q_american%2520x
+
 - title: Inglourious Basterds
   year:  2009
   director: Quentin Tarantino
