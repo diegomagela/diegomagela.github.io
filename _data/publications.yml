@@ -22,6 +22,19 @@
 
 journal:
 
+  - title: A review on bistable composite laminates for aerospace applications
+    authors: Diego Magela Lemos, Flávio D. Marques, António J.M. Ferreira
+    year: 2023
+    journal_short: COMPSTRUC
+    journal: Composite Structures
+    conference: 
+    doi: https://doi.org/10.1016/j.compstruct.2023.117756
+    pdf:
+    code:
+    bibtex: assets/publications/journal/lemos2024review.bib
+    image: 
+    notes:
+
   - title: Comparison between a linear and cubic fiber angle variation on buckling response of variable angle tow composite panel
     authors: Diego Magela Lemos, Carlos Alberto Cimini Junior
     year: 2021
