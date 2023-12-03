@@ -14,7 +14,13 @@ last-update: 2023-08-01
 
     <div class="mb-2 flex-none">
         {{ link.authors }}.
-        <a href="{{ link.pdf }}">{{ link.title }}</a>,
+
+        {% if link.pdf %}
+        <a href="{{ link.pdf }}">PDF</a>
+        {% endif %}
+
+        <a href="{{ link.doi }}">{{ link.title }}</a>,
+
         <em>{{ link.journal }}</em>,
         {{ link.year }}.
     </div>
